@@ -3,7 +3,9 @@
 }
 
 .js-display-none {
-  display: none;
+  @include tablet {
+    display: none;
+  }
 }
 
 .js-no-scroll {

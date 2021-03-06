@@ -974,7 +974,7 @@ main {
     display: block;
     position: absolute;
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-color: #a87b62; } }
 
 .page-header--no-js .main-nav {
@@ -3958,8 +3958,9 @@ main {
 .js-display-block {
   display: block; }
 
-.js-display-none {
-  display: none; }
+@media (max-width: 1023px) {
+  .js-display-none {
+    display: none; } }
 
 .js-no-scroll {
   position: fixed;
