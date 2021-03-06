@@ -1753,21 +1753,29 @@ main {
   vertical-align: middle;
   color: #9b9997;
   cursor: pointer; }
-  .pagination__list-item:hover, .pagination__list-item:focus,
-  .pagination__list li:hover,
-  .pagination__list li:focus {
+  .pagination__list-item:focus-within,
+  .pagination__list li:focus-within {
     color: #a87b62;
     outline: 1px solid #a87b62;
     outline-offset: 4px;
-    transition: 0.3s ease-in-out; }
-  .pagination__list-item:active,
-  .pagination__list li:active {
-    color: rgba(86, 64, 52, 0.9);
     transition: 0.3s ease-in-out; }
   @media (max-width: 767px) {
     .pagination__list-item,
     .pagination__list li {
       margin-right: 23px; } }
+
+.pagination__list-item:hover, .pagination__list-item:focus,
+.pagination__list a:hover,
+.pagination__list a:focus {
+  color: #a87b62;
+  outline: 1px solid #a87b62;
+  outline-offset: 4px;
+  transition: 0.3s ease-in-out; }
+
+.pagination__list-item:active,
+.pagination__list a:active {
+  color: rgba(86, 64, 52, 0.9);
+  transition: 0.3s ease-in-out; }
 
 .pagination__list-item.pagination__current-page {
   color: #1d1613;

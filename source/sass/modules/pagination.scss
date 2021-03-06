@@ -27,7 +27,7 @@
   cursor: pointer;
 
   &:focus-within {
-    color: $color;
+    color: $color_main;
     outline: 1px solid $color_main;
     outline-offset: 4px;
     transition: 0.3s ease-in-out;
