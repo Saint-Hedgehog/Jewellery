@@ -211,8 +211,8 @@
       @include pseudo;
 
       bottom: -1px;
-      left: -32px;
-      width: calc(100% + 2 * 40px);
+      left: 0;
+      width: 100%;
       height: 1px;
       background-color: $color_main;
     }
@@ -231,8 +231,6 @@
 
     &::before {
       bottom: 0;
-      left: -20px;
-      width: calc(100% + 2 * 20px);
     }
   }
 }
@@ -243,12 +241,24 @@
 
   @include tablet {
     top: 39px;
-    right: -1px;
+    right: 47px;
   }
 
   @include mobile {
     top: 31px;
-    right: 0px;
+    right: 20px;
+  }
+}
+
+.accordion--mini .accordion__item > div {
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 48px;
+  }
+
+  @include mobile {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 

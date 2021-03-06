@@ -18,7 +18,6 @@
 .pagination__list-item,
 .pagination__list li {
   @include typography (16, 21);
-  @include hover-effect($color_main);
 
   list-style: none;
   display: inline-block;
@@ -27,9 +26,21 @@
   color: $color_text-light;
   cursor: pointer;
 
+  &:focus-within {
+    color: $color;
+    outline: 1px solid $color_main;
+    outline-offset: 4px;
+    transition: 0.3s ease-in-out;
+  }
+
   @include mobile {
     margin-right: 23px;
   }
+}
+
+.pagination__list-item,
+.pagination__list a {
+  @include hover-effect($color_main);
 }
 
 .pagination__list-item.pagination__current-page {

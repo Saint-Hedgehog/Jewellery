@@ -110,17 +110,32 @@
   }
 }
 
-.card:hover h3 {
-  color: $color_main;
-  transition: all 0.7s ease-in-out;
+.card:hover,
+.card:focus-within {
+  h3 {
+    color: $color_main;
+    transition: all 0.7s ease-in-out;
+  }
+
+  p {
+    color: $color_main;
+    transition: all 0.7s ease-in-out;
+  }
+
+  img {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
 }
 
-.card:hover p {
-  color: $color_main;
-  transition: all 0.7s ease-in-out;
-}
+.card:active {
+  h3 {
+    color: $color_hover;
+    transition: all 0.7s ease-in-out;
+  }
 
-.card:hover img {
-  transform: scale(1.05);
-  transition: all 0.3s ease-in-out;
+  p {
+    color: $color_hover;
+    transition: all 0.7s ease-in-out;
+  }
 }

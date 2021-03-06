@@ -61,28 +61,44 @@
 'use strict';
 
 (function () {
-  const showFiltersBtn = document.querySelector(`.catalog__filter-open-btn`);
-  const catalogFilter = document.querySelector(`.catalog__filter-overlay`);
-  const closeBtn = document.querySelector(`.catalog__filter-close-btn`);
+  if (document.querySelector(`.catalog__filter-open-btn`)) {
+    const showFiltersBtn = document.querySelector(`.catalog__filter-open-btn`);
+    const overlay = document.querySelector(`#overlay-filter`);
+    const closeModalBtn = overlay.querySelector(`.js-close`);
+    const catalog = document.querySelector(`.catalog`);
 
-  if (showFiltersBtn && catalogFilter && closeBtn) {
-
-
-    if (catalogFilter.classList.contains(`js-display-block`)) {
-      catalogFilter.classList.remove(`js-display-block`);
-    }
-
-    if (closeBtn.classList.contains(`js-display-block`)) {
-      closeBtn.classList.remove(`js-display-block`);
-    }
+    catalog.classList.remove(`catalog--no-js`);
 
     const showModalHandler = function (evt) {
       evt.preventDefault();
-      catalogFilter.classList.toggle(`js-display-block`);
+
+      window.utils.showModal(overlay);
+      closeModalBtn.addEventListener(`click`, hideModalHandler);
+      overlay.addEventListener(`click`, overlayPressHandler);
+      document.addEventListener(`keydown`, escPressHandler);
+    };
+
+    const hideModalHandler = function () {
+      closeModalBtn.removeEventListener(`click`, hideModalHandler);
+      overlay.removeEventListener(`click`, overlayPressHandler);
+      document.removeEventListener(`keydown`, escPressHandler);
+
+      window.utils.hideModal(overlay);
+    };
+
+    const escPressHandler = function (evt) {
+      if (evt.key === `Escape`) {
+        window.utils.hideModal(overlay);
+      }
+    };
+
+    const overlayPressHandler = function (evt) {
+      if (!evt.target.closest(`.js-modal`)) {
+        window.utils.hideModal(overlay);
+      }
     };
 
     showFiltersBtn.addEventListener(`click`, showModalHandler);
-    closeBtn.addEventListener(`click`, showModalHandler);
   }
 })();
 

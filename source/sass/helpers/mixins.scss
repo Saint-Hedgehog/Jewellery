@@ -25,24 +25,9 @@
   position: $pos;
 }
 
-@mixin transition($curve: $trans-curve, $speed: $trans-speed) {
-  transition: all $trans-speed $trans-curve;
-}
-
 @mixin retina {
   @media (min-resolution: $retina) {
     @content;
-  }
-}
-
-@mixin interaction($hover: 0.7, $active: 0.3) {
-  &:hover,
-  &:focus {
-    opacity: $hover;
-  }
-
-  &:active {
-    opacity: $active;
   }
 }
 
@@ -93,7 +78,6 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-// ------
 
 @mixin title-cover {
   @include typography (45, 58);
@@ -123,10 +107,6 @@
   }
 }
 
-// @mixin title-three {
-//   @include font-one(26px, 1.3, $semi);
-// }
-
 @mixin bg-img {
   background-repeat: no-repeat;
   background-size: cover;
@@ -148,23 +128,6 @@
   }
 }
 
-@mixin hover-svg($fill-color, $stroke-color) {
-  &:hover svg,
-  &:focus svg {
-    transition: 0.3s ease-in-out;
-    outline: 0 none;
-    fill: $fill-color;
-    stroke: $stroke-color;
-  }
-
-  &:active svg {
-    opacity: 0.8;
-    transition: 0.3s ease-in-out;
-    fill: $fill-color;
-    stroke: $stroke-color;
-  }
-}
-
 @mixin hover-opacity {
   &:hover,
   &:focus {
@@ -182,23 +145,18 @@
 
 @mixin link-subtitle {
   @include typography (16, 21);
+  @include hover-effect($color_main);
 
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  // padding-bottom: 5px;
-
-  // @include font-three(16px, 1.3, $med);
   color: $color_text;
 
-  @include hover-effect($color_main);
-
   &::after {
-    content: "";
-    position: absolute;
+    @include pseudo;
+
     bottom: -5px;
     left: 0;
-    display: block;
     width: 100%;
     height: 1px;
     background-color: $color_main;

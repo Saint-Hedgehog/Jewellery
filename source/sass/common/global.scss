@@ -26,6 +26,12 @@ body {
   color: $color_text;
 }
 
+.body {
+  @include tablet {
+    overflow: hidden;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
