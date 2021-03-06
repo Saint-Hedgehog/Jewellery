@@ -114,12 +114,12 @@
 .card:focus-within {
   h3 {
     color: $color_main;
-    transition: all 0.7s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   p {
     color: $color_main;
-    transition: all 0.7s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   img {
@@ -131,11 +131,11 @@
 .card:active {
   h3 {
     color: $color_hover;
-    transition: all 0.7s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   p {
     color: $color_hover;
-    transition: all 0.7s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 }

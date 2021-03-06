@@ -348,23 +348,23 @@
   margin-bottom: 4px;
   color: $color_text-light;
 
-    &::before,
-    &::after {
-      @include pseudo;
+  &::before,
+  &::after {
+    @include pseudo;
 
-      top: 0;
-      width: 1px;
-      height: 100%;
-      background-color: $color_line;
-    }
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: $color_line;
+  }
 
-    &::before {
-      left: 31%;
-    }
+  &::before {
+    left: 31%;
+  }
 
-    &::after {
-      right: 29.4%;
-    }
+  &::after {
+    right: 29.4%;
+  }
 
   @include tablet {
     @include typography (12, 16);

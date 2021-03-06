@@ -112,7 +112,7 @@
   visibility: visible;
   overflow: none;
   opacity: 1;
-  transition: all .5s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .accordion__item > div {
@@ -150,7 +150,7 @@
   background-repeat: no-repeat;
   background-size: 17px 10px;
   background-position: 50%;
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
   transform: rotate(-180deg);
   cursor: pointer;
 
@@ -173,7 +173,7 @@
 .accordion__item--shown::after {
   display: block;
   transform: rotate(0deg);
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 // catalog page - filter

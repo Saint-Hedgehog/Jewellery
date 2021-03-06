@@ -268,8 +268,6 @@
 }
 
 .added-to-cart__quantity-btn:active {
-  // outline: 1px solid $color_text;
-  // outline-offset: 3px;
   transition: 0.3s ease-in-out;
 
   &::before,
@@ -284,7 +282,7 @@
     transform: translate(-50%) rotate(90deg);
   }
 
-  &::before{
+  &::before {
     left: 1px;
   }
 }
@@ -294,7 +292,7 @@
     display: none;
   }
 
-  &::before{
+  &::before {
     left: 1px;
   }
 }

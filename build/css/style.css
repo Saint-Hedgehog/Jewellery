@@ -525,10 +525,6 @@ body {
   font-weight: 500;
   color: #1d1613; }
 
-@media (max-width: 1023px) {
-  .body {
-    overflow: hidden; } }
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -671,15 +667,15 @@ main {
     transition: 0.3s ease-in-out; }
   .btn-close::after, .btn-close::before {
     content: "";
+    display: block;
     position: absolute;
     top: 50%;
     left: 0;
     right: 0;
-    margin: 0 auto;
     z-index: 10;
-    display: block;
     width: 18px;
     height: 2px;
+    margin: 0 auto;
     background-color: #1d1613; }
   .btn-close::after {
     transform: rotate(-45deg) translateY(-50%); }
@@ -725,7 +721,7 @@ main {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  box-shadow: 0px 4px 32px rgba(121, 121, 121, 0.24);
+  box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24);
   overflow: auto;
   transform: translateX(-50%); }
   @media (max-width: 1023px) {
@@ -792,7 +788,6 @@ main {
   @media (max-width: 767px) {
     .page-header__top-container {
       min-height: 92px;
-      padding-top: 20px;
       padding: 20px 14px; } }
 
 .page-header--main .page-header__top-container {
@@ -1571,12 +1566,12 @@ main {
 .card:hover h3,
 .card:focus-within h3 {
   color: #a87b62;
-  transition: all 0.7s ease-in-out; }
+  transition: all 0.3s ease-in-out; }
 
 .card:hover p,
 .card:focus-within p {
   color: #a87b62;
-  transition: all 0.7s ease-in-out; }
+  transition: all 0.3s ease-in-out; }
 
 .card:hover img,
 .card:focus-within img {
@@ -1585,11 +1580,11 @@ main {
 
 .card:active h3 {
   color: rgba(86, 64, 52, 0.9);
-  transition: all 0.7s ease-in-out; }
+  transition: all 0.3s ease-in-out; }
 
 .card:active p {
   color: rgba(86, 64, 52, 0.9);
-  transition: all 0.7s ease-in-out; }
+  transition: all 0.3s ease-in-out; }
 
 .slider {
   --margin: 30px;
@@ -1614,7 +1609,7 @@ main {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.3s ease-in-out; }
 
 .slider__card {
   display: inline-block;
@@ -2129,7 +2124,7 @@ main {
   visibility: visible;
   overflow: none;
   opacity: 1;
-  transition: all .5s ease-out; }
+  transition: all 0.3s ease-out; }
 
 .accordion__item > div {
   margin-top: 15px; }
@@ -2164,7 +2159,7 @@ main {
   background-repeat: no-repeat;
   background-size: 17px 10px;
   background-position: 50%;
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
   transform: rotate(-180deg);
   cursor: pointer; }
   @media (max-width: 1023px) {
@@ -2184,7 +2179,7 @@ main {
 .accordion__item--shown::after {
   display: block;
   transform: rotate(0deg);
-  transition: all 0.5s ease-out; }
+  transition: all 0.3s ease-out; }
 
 .accordion--mini {
   --side_padding: 30px; }
@@ -2596,7 +2591,6 @@ main {
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: flex-start;
-  width: auto;
   width: 33.334%;
   margin-top: -1px; }
   @media (max-width: 1023px) {

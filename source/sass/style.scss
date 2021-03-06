@@ -4,7 +4,6 @@
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/functions";
-
 /* ====== */
 /* Vendor */
 /* ====== */
@@ -19,12 +18,10 @@
 /* ========== */
 /* Components */
 /* ========== */
-
 @import "components/container";
 @import "components/btn";
 @import "components/btn-in-input";
 @import "components/btn-close";
-
 @import "components/overlay";
 @import "components/popup";
 @import "components/visually-hidden";
@@ -61,16 +58,4 @@
 /* product.html */
 @import "modules/product";
 @import "modules/added-to-cart";
-
 @import "components/js-styles"; //приоритет стилей(по этому в конце)
-
-
-// @import "modules/page";
-
-// @import "modules/search-form";
-
-
-// @import "modules/recommend";
-
-
-
