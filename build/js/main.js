@@ -225,8 +225,10 @@
 
       tabBtns.forEach(function (btn) {
         btn.classList.remove(`product__tab-btn--current`);
+        btn.removeAttribute(`tabindex`);
       });
       targetBtn.classList.add(`product__tab-btn--current`);
+      targetBtn.setAttribute(`tabindex`, `-1`);
       tabName = targetBtn.getAttribute(`data-tab-name`);
       showTabPanel();
     };

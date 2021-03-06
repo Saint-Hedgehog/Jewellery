@@ -80,6 +80,7 @@
   background-color: transparent;
   border: 1px solid $color_main;
   transform: translateY(-50%);
+  outline: 0 none;
 
   @include tablet {
     width: 18px;

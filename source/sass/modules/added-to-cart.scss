@@ -46,7 +46,7 @@
   }
 }
 
-.added-to-cart__item a {
+.added-to-cart__item > div:first-of-type {
   @include flex(row);
 
   flex-wrap: nowrap;
@@ -76,7 +76,6 @@
 .added-to-cart h3 {
   @include title;
   @include typography (18, 23);
-  @include hover-effect($color_main);
 
   margin-top: -5px;
   margin-bottom: -6px;
@@ -258,7 +257,9 @@
 
 .added-to-cart__quantity-btn:hover,
 .added-to-cart__quantity-btn:focus {
-  outline: 0 none;
+  outline: 1px solid $color_main;
+  outline-offset: 3px;
+  transition: 0.3s ease-in-out;
 
   &::before,
   &::after {
@@ -267,7 +268,9 @@
 }
 
 .added-to-cart__quantity-btn:active {
-  outline: 0 none;
+  // outline: 1px solid $color_text;
+  // outline-offset: 3px;
+  transition: 0.3s ease-in-out;
 
   &::before,
   &::after {

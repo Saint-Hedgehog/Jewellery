@@ -283,6 +283,11 @@
 
 .product__tab-btn--current {
   color: $color_text;
+  pointer-events: none;
+}
+
+.product__tab-btn:not(.product__tab-btn--current) {
+  @include hover-effect($color_main);
 }
 
 .product__tab-wrapper {

@@ -21,7 +21,8 @@
     border-top: 1px solid $color_main;
   }
 
-  &:hover h3 {
+  &:hover h3,
+  &:focus h3 {
     color: $color_main;
     transition: 0.3s ease-in-out;
     outline: 0 none;
@@ -101,7 +102,6 @@
   visibility: hidden;
   overflow: hidden;
   opacity: 0;
-  transition: margin .5s ease-out;
 }
 
 .accordion__item--shown p,

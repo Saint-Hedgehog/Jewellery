@@ -24,14 +24,6 @@
   margin-right: 12px;
   vertical-align: middle;
   color: $color_text-light;
-  cursor: pointer;
-
-  &:focus-within {
-    color: $color_main;
-    outline: 1px solid $color_main;
-    outline-offset: 4px;
-    transition: 0.3s ease-in-out;
-  }
 
   @include mobile {
     margin-right: 23px;
@@ -41,6 +33,9 @@
 .pagination__list-item,
 .pagination__list a {
   @include hover-effect($color_main);
+
+  color: $color_text-light;
+  cursor: pointer;
 }
 
 .pagination__list-item.pagination__current-page {
@@ -48,11 +43,7 @@
   pointer-events: none;
 }
 
-.pagination__list li {
-  @include hover-effect($color_main);
-}
-
-.pagination__list li.pagination__current-page {
+.pagination__list .pagination__current-page {
   color: $color_text;
   pointer-events: none;
 }
