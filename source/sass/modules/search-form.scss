@@ -1,0 +1,86 @@
+.search-form__bg {
+  @include flex(row);
+
+  position: relative;
+  z-index: 10;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba($white, 0.15);
+  border: 1px solid transparent;
+  border-radius: 21px;
+}
+
+.search-form svg {
+  margin: -1px -5px 0 -1px;
+
+  @include tablet {
+    margin-left: 11px;
+  }
+}
+
+.search-form--on-light-bg svg {
+  @include tablet {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.search-form--on-light-bg input {
+  color: $color-text;
+
+  @include tablet {
+    color: $white;
+  }
+}
+
+.search-form input[type="search"] {
+  @include typography(14, 21);
+
+  width: 91.745%;
+  height: 38px;
+  margin-right: 20px;
+  padding: 8px 20px;
+  font-family: $poppins;
+  background-color: transparent;
+  border: 0 none;
+
+  @include mobile {
+    width: 85.42%;
+  }
+}
+
+.search-form input::placeholder {
+  @include typography(14, 21);
+
+  color: $color-text-light;
+  opacity: 1;
+}
+
+.search-form input[type="search"]:focus {
+  outline: 0 none;
+  border: 0 none;
+}
+
+.search-form__bg--on-light {
+  background-color: rgba($white, 0.05);
+  border: 1px solid $white;
+  border-radius: 21px;
+
+  &::before {
+    @include pseudo;
+
+    top: 0;
+    left: -15px;
+    z-index: -1;
+    width: calc(100% + 2 * 15px);
+    height: 100%;
+    background-color: rgba($color-text-light, 0.05);
+    border-radius: 21px;
+  }
+}
+
+.search-form__bg--on-dark {
+  background-color: rgba($white, 0.05);
+  border: 1px solid $white;
+  border-radius: 21px;
+}

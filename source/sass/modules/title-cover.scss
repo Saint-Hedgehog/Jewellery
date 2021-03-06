@@ -1,0 +1,148 @@
+.title-cover {
+  min-height: 261px;
+  padding-top: 65px;
+  padding-bottom: 55px;
+  background-color: $color_main;
+
+  @include mobile {
+    padding-top: 50px;
+  }
+}
+
+.title-cover--main {
+  @include bg-img;
+
+  min-height: 463px;
+  margin-bottom: 41px;
+  padding-top: 145px;
+  background-image: url("../img/bg/title-cover-index@1x.jpg");
+
+  @include retina {
+    background-image: url("../img/bg/title-cover-index@2x.jpg");
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+    background-image: url("../img/bg/title-cover-index-tablet@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/title-cover-index-tablet@2x.jpg");
+    }
+  }
+
+  @include mobile {
+    padding-top: 155px;
+    background-image: url("../img/bg/title-cover-index-mobile@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/title-cover-index-mobile@2x.jpg");
+    }
+  }
+}
+
+.title-cover--catalog {
+  @include bg-img;
+
+  padding-top: 66px;
+  background-image: url("../img/bg/title-cover-catalog@1x.jpg");
+
+  @include retina {
+    background-image: url("../img/bg/title-cover-catalog@2x.jpg");
+  }
+}
+
+.title-cover--shadow {
+  box-shadow: 0 4px 4px rgba($black, 0.25);
+
+  @include tablet {
+    box-shadow: none;
+  }
+}
+
+.title-cover h2 {
+  @include title;
+
+  margin-bottom: -15px;
+  color: $white;
+
+  @include tablet {
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+}
+
+.title-cover--main h2 {
+  @include title-cover;
+
+  margin-top: 36px;
+  margin-bottom: -7px;
+  padding-left: 2px;
+  color: $white;
+
+  @include tablet {
+    padding-right: 20px;
+  }
+
+  @include mobile {
+    margin-top: 33px;
+    padding: 0;
+  }
+}
+
+.title-cover--catalog h2 {
+  margin-bottom: 2px;
+
+  @include mobile {
+    margin-top: 12px;
+    margin-bottom: 4px;
+  }
+}
+
+.title-cover p {
+  @include typography (16, 21);
+
+  margin-top: -15px;
+  font-family: $cormorant-garamond;
+  color: $white;
+  text-align: center;
+
+  @include mobile {
+    margin-top: -18px;
+  }
+}
+
+.title-cover--main p {
+  @include typography (38, 49);
+
+  margin-top: 0;
+  font-weight: 400;
+  font-style: italic;
+  color: $white;
+  text-align: center;
+
+  @include tablet {
+    padding-right: 19px;
+  }
+
+  @include mobile {
+    @include typography (34, 44);
+
+    padding-right: 1px;
+  }
+}
+
+.title-cover--catalog p {
+  @include typography (22, 29);
+
+  margin: 0;
+  padding-left: 4px;
+  font-style: italic;
+
+  @include tablet {
+    padding-left: 0;
+  }
+
+  @include mobile {
+    @include typography (22, 26);
+  }
+}

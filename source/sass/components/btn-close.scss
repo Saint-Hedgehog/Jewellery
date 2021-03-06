@@ -1,0 +1,49 @@
+.btn-close {
+  position: relative;
+  z-index: 200;
+  display: block;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: 0 none;
+  background-color: transparent;
+
+  @include hover-opacity;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: $color_text;
+  }
+
+  &::after {
+    transform: rotate(-45deg) translateY(-50%);
+  }
+
+  &::before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+.btn-close--round {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $color_text;
+
+  &::after,
+  &::before {
+    width: 18px;
+    height: 2px;
+    background-color: $white;
+  }
+}

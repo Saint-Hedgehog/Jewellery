@@ -1,0 +1,70 @@
+.page-footer {
+  padding-top: 86px;
+  padding-bottom: 69px;
+  color: $white;
+  background-color: $black;
+
+  @include tablet {
+    padding-top: 45px;
+    padding-bottom: 40px;
+  }
+
+  @include mobile {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+.page-footer__container {
+  @include flex(row);
+
+  justify-content: flex-start;
+}
+
+.page-footer__signup {
+  width: 44.873%;
+  margin-right: auto;
+  margin-bottom: 30px;
+  padding-right: 2.137%;
+
+  @include tablet {
+    width: 82.598%;
+    margin-bottom: 36px;
+    padding-right: 0;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+
+.page-footer__nav {
+  margin-right: 4.274%;
+
+  @include tablet {
+    margin-left: 0;
+    margin-right: 7.818%;
+  }
+
+  @include mobile {
+    margin-right: 0;
+  }
+}
+
+.page-footer__social {
+  min-width: 115px;
+
+  @include desktop-only {
+    margin-left: 2.052%;
+  }
+
+  @include tablet {
+    margin-left: 0;
+  }
+
+  @include mobile {
+    width: 100%;
+    max-width: none;
+  }
+}

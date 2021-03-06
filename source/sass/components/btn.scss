@@ -1,0 +1,44 @@
+.btn {
+  @include typography (16, 21);
+  @include hover-effect($white);
+
+  display: inline-block;
+  width: 100%;
+  padding: 24px 20px 21px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $color_main;
+  color: $white;
+  border: 1px solid $color_main;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: 0 none;
+  }
+
+  @include mobile {
+    @include typography (16, 21);
+
+    padding-bottom: 22px;
+    padding-top: 23px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color_hover;
+    border: 1px solid $color_hover;
+  }
+}
+
+.btn--ghost {
+  margin-top: 25px;
+  background-color: transparent;
+  color: $color_text;
+  border: 1px solid $color_main;
+
+  @include mobile {
+    margin-top: 20px;
+  }
+}

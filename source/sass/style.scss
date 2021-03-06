@@ -1,0 +1,76 @@
+/* ======= */
+/* Helpers */
+/* ======= */
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+/* ====== */
+/* Vendor */
+/* ====== */
+@import "vendor/normalize";
+@import "vendor/swiper-vars";
+@import "vendor/swiper";
+/* ====== */
+/* Common */
+/* ====== */
+@import "common/fonts";
+@import "common/global";
+/* ========== */
+/* Components */
+/* ========== */
+
+@import "components/container";
+@import "components/btn";
+@import "components/btn-in-input";
+@import "components/btn-close";
+
+@import "components/overlay";
+@import "components/popup";
+@import "components/visually-hidden";
+/* ======= */
+/* Modules */
+/* ======= */
+/* index.html */
+// header
+@import "modules/page-header";
+@import "modules/search-form";
+@import "modules/main-nav";
+// main
+@import "modules/title-cover";
+@import "modules/new";
+@import "modules/card";
+@import "modules/slider";
+@import "modules/pagination";
+@import "modules/blog";
+@import "modules/faq";
+@import "modules/accordion";
+@import "modules/gallery";
+// footer
+@import "modules/page-footer";
+@import "modules/signup";
+@import "modules/info-form";
+@import "modules/footer-nav";
+@import "modules/social";
+// popup
+@import "modules/login";
+/* catalog.html */
+@import "modules/catalog";
+@import "modules/filter-form";
+@import "modules/double-range";
+/* product.html */
+@import "modules/product";
+@import "modules/added-to-cart";
+
+@import "components/js-styles"; //приоритет стилей(по этому в конце)
+
+
+// @import "modules/page";
+
+// @import "modules/search-form";
+
+
+// @import "modules/recommend";
+
+
+

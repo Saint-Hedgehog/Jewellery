@@ -1,0 +1,134 @@
+.login {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login--page {
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  @include tablet {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  @include mobile {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.login__form {
+  @include bg-img;
+
+  display: block;
+  width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 162px 45px 55px;
+  background-image: url("../img/bg/login-sweet-ice-cream@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 430px 138px;
+  background-position: 50% 0;
+  background-color: $color_light;
+
+  @include retina {
+    background-image: url("../img/bg/login-sweet-ice-cream@2x.jpg");
+  }
+
+  @include tablet {
+    width: 442px;
+    padding: 162px 51px 55px;
+    background-size: 442px 138px;
+  }
+
+  @include mobile {
+    width: 270px;
+    padding: 96px 15px 40px;
+    background-size: 270px 84px;
+  }
+}
+
+.login__form.info-form {
+  box-shadow: 0 5px 32px $color-popap-shadow;
+}
+
+.login__form h2 {
+  @include title;
+
+  margin-bottom: 23px;
+
+  @include tablet {
+    margin-top: 25px;
+    margin-bottom: 23px;
+  }
+
+  @include mobile {
+    @include typography (24, 31);
+
+    margin-bottom: 16px;
+  }
+}
+
+.login__form button[ty-e="submit"] {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.login__forgot-password {
+  @include typography (12, 18);
+  @include hover-effect($color_main);
+
+  display: inline-block;
+  margin-left: 201px;
+  margin-top: 4px;
+  margin-bottom: 46px;
+  padding-right: 1px;
+  vertical-align: center;
+  color: $color_text-light;
+
+  &:hover,
+  &:focus {
+    outline: 0 none;
+  }
+
+  @include mobile {
+    margin-left: 102px;
+    margin-bottom: 36px;
+    padding-right: 0;
+  }
+}
+
+.login__sign-up {
+  @include typography (14, 21);
+  @include hover-effect($color_main);
+
+  display: inline-block;
+  margin-left: 53px;
+  margin-top: 14px;
+  padding-right: 5px;
+  text-align: center;
+  vertical-align: center;
+  color: $color_text-light;
+
+  @include tablet {
+    margin-left: 58px;
+    padding-right: 0;
+  }
+
+  @include mobile {
+    margin-left: 8px;
+  }
+}
+
+.login__sign-up span {
+  @include hover-effect($color_text-light);
+
+  padding-left: 5px;
+  color: $color_text;
+
+  @include tablet {
+    padding-left: 0;
+  }
+}

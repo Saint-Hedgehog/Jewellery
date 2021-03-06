@@ -1,0 +1,107 @@
+.main-nav__container {
+  padding-top: 18px;
+  padding-bottom: 9px;
+
+  @include tablet {
+    padding-top: 95px;
+    padding-bottom: 65px;
+  }
+
+  @include mobile {
+    padding-top: 85px;
+    padding-bottom: 34px;
+  }
+}
+
+.main-nav__list {
+  @include reset-list;
+}
+
+.main-nav__link {
+  display: inline-block;
+  vertical-align: center;
+  color: $color_text;
+
+  @include desktop-only {
+    @include hover-effect($color_main);
+  }
+
+  @include tablet {
+    @include hover-opacity;
+
+    color: $white;
+  }
+}
+
+.main-nav__list--primary {
+  @include desktop-only {
+    @include flex(row);
+
+    justify-content: center;
+    padding-left: 45px;
+
+    li {
+      margin-right: 35px;
+      margin-bottom: 10px
+    }
+  }
+
+  @include tablet {
+    li {
+      margin-bottom: 21px
+    }
+  }
+}
+
+.main-nav__link--primary {
+  @include typography (16, 24);
+
+  @include tablet {
+    @include typography (24, 36);
+  }
+}
+
+.main-nav__list--secondary {
+  @include desktop-only {
+    display: none;
+  }
+
+  @include tablet {
+    padding: 10px 0;
+  }
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.main-nav__link--secondary {
+  color: rgba($white, 0.75);
+
+  @include tablet {
+    @include typography (18, 23);
+
+    padding: 10px 0;
+  }
+}
+
+.main-nav__link--login {
+  @include desktop-only {
+    display: none;
+  }
+
+  @include tablet {
+    @include typography (18, 23);
+
+    margin-top: 15px;
+    padding: 10px 0;
+  }
+
+  @include mobile {
+    margin-top: 16px;
+  }
+}
+
+.main-nav__link--login-page {
+  pointer-events: none;
+}

@@ -1,0 +1,210 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button-reset {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+@mixin fieldset-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin transition($curve: $trans-curve, $speed: $trans-speed) {
+  transition: all $trans-speed $trans-curve;
+}
+
+@mixin retina {
+  @media (min-resolution: $retina) {
+    @content;
+  }
+}
+
+@mixin interaction($hover: 0.7, $active: 0.3) {
+  &:hover,
+  &:focus {
+    opacity: $hover;
+  }
+
+  &:active {
+    opacity: $active;
+  }
+}
+
+@mixin typography($fs, $lh) {
+  font-size: rem($fs);
+  line-height: rem($lh);
+}
+
+@mixin flex($flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@mixin desktop-only {
+  @media (min-width: $tab_max) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tab_max) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $tab_min) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina) {
+    @content;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+// ------
+
+@mixin title-cover {
+  @include typography (45, 58);
+
+  font-family: $cormorant-garamond;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @include mobile {
+    @include typography (38, 49);
+  }
+}
+
+@mixin title {
+  @include typography (34, 44);
+
+  margin-top: 25px;
+  margin-bottom: 24px;
+  font-family: $cormorant-garamond;
+  font-weight: 700;
+  text-align: center;
+
+  @include tablet {
+    margin-top: 29px;
+    margin-bottom: 20px;
+  }
+}
+
+// @mixin title-three {
+//   @include font-one(26px, 1.3, $semi);
+// }
+
+@mixin bg-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+@mixin hover-effect($color) {
+  &:hover,
+  &:focus {
+    color: $color;
+    outline: 1px solid $color;
+    outline-offset: 4px;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:active {
+    color: $color_hover;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+@mixin hover-svg($fill-color, $stroke-color) {
+  &:hover svg,
+  &:focus svg {
+    transition: 0.3s ease-in-out;
+    outline: 0 none;
+    fill: $fill-color;
+    stroke: $stroke-color;
+  }
+
+  &:active svg {
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+    fill: $fill-color;
+    stroke: $stroke-color;
+  }
+}
+
+@mixin hover-opacity {
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+    outline: 1px solid $color_text;
+    outline-offset: 4px;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+@mixin link-subtitle {
+  @include typography (16, 21);
+
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  // padding-bottom: 5px;
+
+  // @include font-three(16px, 1.3, $med);
+  color: $color_text;
+
+  @include hover-effect($color_main);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $color_main;
+
+    @include tablet {
+      bottom: -5px;
+    }
+  }
+}

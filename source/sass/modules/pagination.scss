@@ -1,0 +1,47 @@
+.pagination {
+  position: relative;
+  z-index: 100;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  text-align: center;
+}
+
+.pagination__list {
+  @include flex(row);
+  @include reset-list;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination__list-item,
+.pagination__list li {
+  @include typography (16, 21);
+  @include hover-effect($color_main);
+
+  list-style: none;
+  display: inline-block;
+  margin-right: 12px;
+  vertical-align: middle;
+  color: $color_text-light;
+  cursor: pointer;
+
+  @include mobile {
+    margin-right: 23px;
+  }
+}
+
+.pagination__list-item.pagination__current-page {
+  color: $color_text;
+  pointer-events: none;
+}
+
+.pagination__list li {
+  @include hover-effect($color_main);
+}
+
+.pagination__list li.pagination__current-page {
+  color: $color_text;
+  pointer-events: none;
+}

@@ -1,0 +1,44 @@
+.faq {
+  padding-top: 24px;
+  padding-bottom: 30px;
+
+  @include tablet {
+    padding-top: 9px;
+  }
+
+  @include mobile {
+    padding-top: 19px;
+    padding-bottom: 0;
+  }
+}
+
+.faq h2 {
+  @include title;
+
+  margin-bottom: 49px;
+  padding-left: 2px;
+  letter-spacing: 0.03em;
+
+  @include tablet {
+    margin-top: 0;
+    margin-bottom: 49px;
+  }
+
+  @include mobile {
+    margin-bottom: 29px;
+  }
+}
+
+.faq__list {
+  max-width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}

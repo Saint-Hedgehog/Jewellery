@@ -1,0 +1,25 @@
+.btn-in-input {
+  @include typography (16, 21);
+  @include button-reset;
+  @include hover-opacity;
+
+  align-self: stretch;
+  min-width: 103px;
+  min-height: 30px;
+  padding-right: 42px;
+  color: $white;
+  background-color: $black;
+  border: 0 none;
+
+  &--arrow {
+    background-image: url("../img/footer-arrow-white.svg");
+    background-repeat: no-repeat;
+    background-size: 29px 9px;
+    background-position: 100% 50%;
+
+    &:hover,
+    &:focus {
+      outline: 0 none;
+    }
+  }
+}

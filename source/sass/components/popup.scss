@@ -1,0 +1,31 @@
+.popup {
+  position: absolute;
+  top: 372px;
+  left: 50%;
+  z-index: 100;
+  width: max-content;
+  height: max-content;
+  box-shadow: 0px 4px 32px $color-popap-card-shadow;
+  overflow: auto;
+  transform: translateX(-50%);
+
+  @include tablet {
+    top: 258px;
+  }
+
+  @include mobile {
+    top: 117px;
+  }
+}
+
+.popup--center {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup__close-btn {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  z-index: 100;
+}

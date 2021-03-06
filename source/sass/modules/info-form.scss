@@ -1,0 +1,62 @@
+.info-form h2 {
+  @include title;
+}
+
+.info-form fieldset {
+  @include flex(row);
+  @include fieldset-reset;
+
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-bottom: 24px;
+
+  @include mobile {
+    max-width: 450px;
+    margin-bottom: 19px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.info-form input {
+  @include typography (14, 21);
+
+  flex-grow: 1;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 8px;
+  background-color: transparent;
+  border: 0 none;
+
+  @include mobile {
+    width: 187px;
+  }
+}
+
+.info-form input:active,
+.info-form input:focus {
+  background-color: transparent;
+  outline: 0 none;
+}
+
+.info-form input[type="email"]::placeholder {
+  @include typography (14, 21);
+}
+
+.info-form--on-dark-bg input {
+  color: $white;
+}
+
+.info-form--on-dark-bg fieldset {
+  border-bottom: 1px solid $white;
+}
+
+.info-form--on-light-bg input {
+  color: $color_text;
+}
+
+.info-form--on-light-bg fieldset {
+  border-bottom: 1px solid $color_text;
+}

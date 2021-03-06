@@ -1,0 +1,315 @@
+.added-to-cart {
+  position: relative;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 35px 55px;
+  background-color: $white;
+
+  @include tablet {
+    width: 502px;
+    padding: 30px 30px 55px;
+  }
+
+  @include mobile {
+    width: 290px;
+    padding: 22px 15px 45px;
+  }
+}
+
+.added-to-cart__item {
+  @include flex(row);
+
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.added-to-cart h2 {
+  @include title;
+  @include typography (26, 34);
+
+  margin-top: 16px;
+  margin-bottom: 47px;
+
+  @include tablet {
+    margin-top: 16px;
+    margin-bottom: 47px;
+  }
+
+  @include mobile {
+    @include typography (24, 29);
+
+    margin-bottom: 33px;
+    padding-left: 26px;
+    padding-right: 25px;
+  }
+}
+
+.added-to-cart__item a {
+  @include flex(row);
+
+  flex-wrap: nowrap;
+  max-width: 85%;
+  color: $color_text;
+}
+
+.added-to-cart img {
+  width: 84px;
+  min-width: 84px;
+  height: 79px;
+  margin-right: 20px;
+
+  @include tablet {
+    width: 88px;
+    min-width: 88px;
+  }
+
+  @include mobile {
+    width: 70px;
+    min-width: 70px;
+    height: 63px;
+    margin-right: 15px;
+  }
+}
+
+.added-to-cart h3 {
+  @include title;
+  @include typography (18, 23);
+  @include hover-effect($color_main);
+
+  margin-top: -5px;
+  margin-bottom: -6px;
+
+  @include tablet {
+    margin-top: -5px;
+    margin-bottom: -6px;
+  }
+
+  @include mobile {
+    @include typography (16, 21);
+  }
+}
+
+.added-to-cart__description p {
+  @include typography (18, 23);
+
+  margin-top: 14px;
+
+  @include mobile {
+    @include typography (16, 21);
+
+    margin-top: 12px;
+  }
+}
+
+.added-to-cart__description span {
+  padding-left: 2px;
+}
+
+.added-to-cart__total-wrapper {
+  @include flex(row);
+  @include typography (14, 18);
+
+  position: relative;
+  margin-top: 42px;
+  margin-bottom: 22px;
+  font-weight: normal;
+
+  &::before {
+    @include pseudo;
+
+    top: -3px;
+    left: -35px;
+    width: 500px;
+    height: 1px;
+    background-color: $color_line;
+  }
+
+  span {
+    padding-left: 3px;
+  }
+
+  @include tablet {
+    &::before {
+      left: -30px;
+      width: 502px;
+    }
+  }
+
+  @include mobile {
+    @include typography (12, 16);
+
+    margin-top: 34px;
+    margin-bottom: 20px;
+
+    &::before {
+      top: -9px;
+      left: -15px;
+      width: 290px;
+    }
+
+    p:last-of-type {
+      margin-top: 0;
+      font-weight: 500;
+    }
+
+    span {
+      padding-left: 1px;
+    }
+  }
+}
+
+.added-to-cart__btns-wrapper {
+  @include flex(row);
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.added-to-cart__btn {
+  display: inline-block;
+  width: 46.5%;
+  text-align: center;
+  vertical-align: middle;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.added-to-cart__btn.btn.btn--ghost {
+  margin-top: 0;
+
+  @include tablet {
+    padding-left: 20px;
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.added-to-cart__btn.btn {
+  @include tablet {
+    padding-top: 23px;
+    padding-bottom: 22px;
+    padding-left: 13px;
+  }
+
+  @include mobile {
+    padding-left: 20px;
+  }
+}
+
+.added-to-cart__btn-close {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+
+  @include tablet {
+    right: 11px;
+  }
+
+  @include mobile {
+    top: 4px;
+    right: 5px;
+  }
+}
+
+.added-to-cart__quantity-wrapper {
+  @include flex(column);
+
+  align-items: flex-end;
+  max-width: 15%;
+  margin: -5px -3px 0 auto;
+
+  @include tablet {
+    margin: -1px -1px 0 auto;
+  }
+}
+
+.added-to-cart__quantity {
+  margin-top: 15px;
+  margin-bottom: 12px;
+  margin-right: 2px;
+  text-align: center;
+}
+
+.added-to-cart__quantity-btn {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: 0 none;
+
+  &::before,
+  &::after {
+    @include pseudo;
+
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 2px;
+    background-color: $color_text-light;
+  }
+}
+
+.added-to-cart__quantity-btn:hover,
+.added-to-cart__quantity-btn:focus {
+  outline: 0 none;
+
+  &::before,
+  &::after {
+    opacity: 0.7;
+  }
+}
+
+.added-to-cart__quantity-btn:active {
+  outline: 0 none;
+
+  &::before,
+  &::after {
+    opacity: 0.4;
+  }
+}
+
+.added-to-cart__quantity-btn--plus {
+  &::after {
+    left: 50%;
+    transform: translate(-50%) rotate(90deg);
+  }
+
+  &::before{
+    left: 1px;
+  }
+}
+
+.added-to-cart__quantity-btn--minus {
+  &::after {
+    display: none;
+  }
+
+  &::before{
+    left: 1px;
+  }
+}
+
+.added-to-cart__quantity-wrapper p {
+  @include typography (18, 23);
+
+  display: block;
+  width: 14px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  padding-left: 4px;
+  align-self: center;
+
+  @include mobile {
+    @include typography (16, 21);
+
+    margin-bottom: 5px;
+    margin-top: 14px;
+  }
+}

@@ -1,0 +1,132 @@
+.double-range {
+  position: relative;
+  z-index: 10;
+  display: block;
+  width: 100%;
+  min-height: max-content;
+  overflow: hidden;
+}
+
+.double-range__controls {
+  padding: 10px 0;
+
+  @include tablet {
+    margin-left: 10px;
+    margin-right: 48px;
+    padding: 11px 0 12px;
+  }
+
+  @include mobile {
+    margin: 0;
+  }
+}
+
+.double-range__scale {
+  position: relative;
+  display: block;
+  height: 1px;
+  background: $color_light;
+}
+
+.double-range__bar {
+  position: relative;
+  left: 26%;
+  display: block;
+  width: 52%;
+  height: 1px;
+  background-color: $color_main;
+
+  @include tablet {
+    left: 17.767%;
+    width: 57%;
+  }
+
+  @include mobile {
+    left: 19.6%;
+    width: 54%;
+  }
+}
+
+.double-range__toggle {
+  --double-range-toggle-width: 15px;
+  position: absolute;
+  top: -7.5px;
+  display: block;
+  width: var(--double-range-toggle-width);
+  height: var(--double-range-toggle-width);
+  background-color: $color_main;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @include tablet {
+    --double-range-toggle-width: 18px;
+    top: -8.5px;
+  }
+}
+
+.double-range__toggle:hover {
+  background-color: $color_hover-rgb;
+}
+
+.double-range__toggle--min {
+  left: calc(var(--double-range-toggle-width) / (0 - 2));
+}
+
+.double-range__toggle--max {
+  right: calc(var(--double-range-toggle-width) / (0 - 1.5));
+}
+
+.double-range__price-controls {
+  @include flex(row);
+
+  position: relative;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 25px;
+}
+
+.double-range label:nth-of-type(2n),
+.double-range label:nth-of-type(2n+1) {
+  @include flex(row);
+  @include typography (14, 18);
+
+  position: absolute;
+  left: 19%;
+  top: 0;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  @include tablet {
+    @include typography (16, 21);
+
+    left: 13.1%;
+  }
+}
+
+.double-range label:nth-of-type(2n) {
+  left: 71%;
+
+  @include tablet {
+    left: 61%;
+  }
+
+  @include mobile {
+    left: 67.22%;
+  }
+}
+
+.double-range input {
+  @include typography (14, 18);
+
+  display: inline-block;
+  width: max-content;
+  max-width: 60px;
+  vertical-align: middle;
+  background: none;
+  border: none;
+  outline: none;
+
+  @include tablet {
+    @include typography (16, 21);
+  }
+}

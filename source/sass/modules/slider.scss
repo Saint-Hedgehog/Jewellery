@@ -1,0 +1,139 @@
+.slider {
+  --margin: 30px;
+  --item_dt: 30px;
+  --item_tab: 324px;
+
+  position: relative;
+  display: block;
+  width: auto;
+  margin: 30px auto 50px;
+
+  @include mobile {
+    margin: 30px auto;
+  }
+}
+
+.slider__wrapper {
+  overflow: hidden;
+}
+
+.slider__slides {
+  display: flex;
+  flex-wrap: nowrap;
+  width: auto;
+  max-width: 100%;
+  height: max-content;
+  transition: all 0.5s ease-in-out;
+}
+
+.slider__card {
+  display: inline-block;
+  min-width: calc((100% - (3 * var(--margin))) / 4);
+  max-width: calc((100% - (3 * var(--margin))) / 4);
+  width: auto;
+  height: max-content;
+  margin-right: 2.565%;
+  vertical-align: top;
+
+  @include tablet {
+    min-width: calc(50% - (var(--margin) / 2));
+    max-width: 45%;
+    width: 40%;
+    margin: 0;
+    margin-right: 4.574%;
+  }
+
+  @include mobile {
+    max-width: calc(50% - (var(--margin) / 2));
+    min-width: calc(50% - (var(--margin) / 2));
+    width: calc(50% - (var(--margin) / 2));
+    margin-right: 10.35%;
+  }
+}
+
+.slider__btns-wrapper {
+  position: absolute;
+  z-index: 100;
+  top: -108px;
+  left: 0;
+
+  @include flex(row);
+  width: 100%;
+
+  @include tablet {
+    top: -97px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.slider__btn {
+  @include bg-img;
+  @include hover-opacity;
+
+  width: 30px;
+  height: 9px;
+  padding: 0;
+  background-color: transparent;
+  border: 0 none;
+  cursor: pointer;
+
+  @include tablet {
+    width: 36px;
+    height: 15px;
+  }
+}
+
+.slider__btn--previous {
+  position: relative;
+  left: -16px;
+  background-image: url("../img/arrow-left.svg");
+  background-repeat: no-repeat;
+
+  @include tablet {
+    left: 0;
+    background-size: 36px 15px;
+  }
+}
+
+.slider__btn--next {
+  background-image: url("../img/arrow-left.svg");
+  background-repeat: no-repeat;
+  transform: rotate(-180deg);
+
+  @include tablet {
+    background-size: 36px 15px;
+  }
+}
+
+.slider__pagination {
+  margin-top: 34px;
+  margin-bottom: 34px;
+  padding-left: 12px;
+
+  @include tablet {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-left: 9px;
+  }
+
+  @include mobile {
+    margin-top: 11px;
+    margin-bottom: 11px;
+    padding-left: 1px;
+  }
+}
+
+.slider__pagination .swiper-pagination-current {
+  padding-right: 6px;
+}
+
+.slider__pagination .swiper-pagination-total {
+  padding-left: 6px;
+}
+
+.slider__btn.swiper-button-disabled {
+  pointer-events: none;
+}

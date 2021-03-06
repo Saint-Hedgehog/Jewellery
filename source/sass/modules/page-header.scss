@@ -1,0 +1,304 @@
+.page-header__top-wrapper {
+  position: relative;
+
+  &::before {
+    @include pseudo;
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color_line;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.page-header__top-container {
+  @include flex(row);
+
+  min-height: 126px;
+  padding-top: 31px;
+  padding-bottom: 30px;
+  align-items: center;
+
+  @include tablet {
+    min-height: 126px;
+    padding: 47px 44px;
+  }
+
+  @include mobile {
+    min-height: 92px;
+    padding-top: 20px;
+    padding: 20px 14px;
+  }
+}
+
+.page-header--main .page-header__top-container {
+  min-height: 115px;
+  padding-top: 20px;
+
+  @include tablet {
+    padding: 54px 44px;
+  }
+
+  @include mobile {
+    min-height: 92px;
+    padding: 37px 14px 37px;
+  }
+}
+
+.page-header__search {
+  display: block;
+  width: 400px;
+  max-width: 45%;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.page-header__nav-toggle {
+  @include hover-opacity;
+
+  display: none;
+  padding: 0;
+  background-color: transparent;
+  border: 0 none;
+  outline: 0 none;
+  cursor: pointer;
+
+  @include tablet {
+    display: block;
+    width: 27px;
+    height: 18px;
+  }
+}
+
+.page-header__nav-toggle svg {
+  @include tablet {
+    width: 27px;
+    height: 18px;
+    stroke: $color-text;
+  }
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
+
+  @include mobile {
+    top: 20px;
+  }
+}
+
+.page-header--main .page-header__logo-link {
+  pointer-events: none;
+}
+
+.page-header__logo-link svg {
+  display: block;
+  width: 66px;
+  height: 66px;
+  fill: $color_main;
+
+  @include mobile {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.page-header__logo-link[href] {
+  @include hover-opacity;
+}
+
+.page-header__user {
+  max-width: 40%;
+  margin-top: -1px;
+
+  @include tablet {
+    max-width: none;
+  }
+}
+
+.page-header__user-list {
+  @include flex(row);
+  @include reset-list;
+
+  justify-content: flex-end;
+}
+
+.page-header__user-item {
+  margin-left: 38px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @include tablet {
+    margin-left: 20px;
+  }
+}
+
+.page-header__user-link {
+  @include typography(14, 21);
+  @include hover-effect($color_main);
+
+  display: block;
+  color: $color-text;
+
+  @include tablet {
+    @include hover-opacity;
+  }
+}
+
+.page-header__user-link--login {
+  @include tablet {
+    display: none;
+  }
+}
+
+.page-header__user-link--login-page {
+  pointer-events: none;
+}
+
+.page-header__user-link--cart span {
+  @include tablet {
+    display: none;
+  }
+}
+
+.page-header__user-link--cart {
+  @include tablet {
+    display: block;
+    width: 20px;
+    height: 18px;
+  }
+}
+
+.page-header__user-link svg {
+  display: none;
+
+  @include tablet {
+    display: block;
+    width: 20px;
+    height: 18px;
+    fill: transparent;
+    stroke: $color-text;
+  }
+}
+
+.page-header--no-js,
+.page-header--nav-open {
+  @include tablet {
+    background-color: $color_main;
+  }
+}
+
+.page-header--nav-open .page-header__logo-img {
+  @include tablet {
+    stroke: $white;
+    fill: transparent;
+  }
+}
+
+.page-header--no-js .page-header__nav-toggle {
+  @include tablet {
+    display: none;
+  }
+}
+
+.page-header--no-js .page-header__user {
+  @include tablet {
+    margin-left: auto;
+  }
+}
+
+.page-header--nav-closed .main-nav {
+  @include tablet {
+    display: none;
+  }
+}
+
+.page-header--no-js .main-nav,
+.page-header--nav-open .main-nav {
+  @include tablet {
+    z-index: 11;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: $color_main;
+  }
+}
+
+.page-header--no-js .main-nav {
+  height: max-content;
+  @include tablet {
+    position: relative;
+  }
+}
+
+.page-header--nav-open svg {
+  @include tablet {
+    fill: $white;
+  }
+}
+
+.page-header--nav-open .page-header__nav-toggle > svg {
+  @include tablet {
+    stroke: $white;
+  }
+}
+
+.page-header--nav-open .page-header__user-link--cart > svg {
+  @include tablet {
+    fill: transparent;
+    stroke: $white;
+  }
+}
+
+.page-header--nav-open .page-header__search {
+  @include tablet {
+    position: absolute;
+    bottom: -50px;
+    left: 45px;
+    z-index: 12;
+    display: block;
+    width: 88.3%;
+    max-width: none;
+  }
+
+  @include mobile {
+    left: 15px;
+    width: 90.63%;
+  }
+}
+
+.page-header.page-header--nav-open input::placeholder {
+  @include tablet {
+    font-size: 0;
+  }
+}
+
+// product.html
+.page-header--product {
+  @include desktop-only {
+    position: relative;
+
+    &::before {
+      @include pseudo;
+
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color_line;
+  }
+  }
+}

@@ -1,0 +1,30 @@
+.recommend {
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 76px;
+  text-align: center;
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+
+  @include mobile {
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+}
+
+.recommend h2 {
+  @include title;
+  letter-spacing: normal;
+}
+
+.recommend h2 + a {
+  @include link-subtitle;
+  margin-bottom: 30px;
+
+  @include mobile {
+    margin-bottom: 10px;
+  }
+}

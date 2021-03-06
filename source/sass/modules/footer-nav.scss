@@ -1,0 +1,60 @@
+.footer-nav {
+  @include flex(row);
+
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  width: auto;
+  width: 33.334%;
+  margin-top: -1px;
+
+  @include tablet {
+    width: 59.735%;
+  }
+
+  @include mobile {
+    flex-wrap: wrap;
+  }
+}
+
+.footer-nav__list {
+  @include reset-list;
+  @include flex(row);
+
+  justify-content: flex-start;
+
+  &--for-customers {
+    width: 52.565%;
+    margin-right: 8.975%;
+
+    @include tablet {
+      margin-right: 12.346%;
+    }
+  }
+
+  &--info {
+    width: 38.465%;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+}
+
+.footer-nav__item {
+  width: 100%;
+}
+
+.footer-nav__link {
+  @include hover-effect($color_main);
+
+  display: block;
+  padding: 11px 0 10px;
+  color: $white;
+
+  @include mobile {
+    padding: 11px 0 10.5px;
+  }
+}

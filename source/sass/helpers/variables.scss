@@ -1,0 +1,56 @@
+// font-family
+$poppins: "Poppins", "Arial", sans-serif;
+$cormorant-garamond: "Cormorant Garamond", "Times New Roman", serif;
+
+//resolution
+$retina: 2dppx;
+
+//transition
+$trans-speed: 0.2s;
+$trans-curve: ease-in;
+
+
+// colors
+$color_main: #a87b62;
+$color_hover: rgba(#564034, 0.9);
+$color_hover-rgb: #675348;
+$color-popap-shadow: rgba(226, 221, 215, 0.24);
+$color-popap-card-shadow: rgba(121, 121, 121, 0.24);
+$color-filter-shadow: rgba(219, 213, 208, 0.5);
+$color_text: #1d1613;
+$color_text-light: #9b9997;
+$color_light: #f0eae4;
+$color_line: #f6f5f4;
+
+$white: #ffffff;
+$black: #000000;
+// -------------------
+
+
+// $f_one: "Cormorant Garamond", "Times New Roman", serif;
+// $f_two: "Cormorant Garamond Italic", "Times New Roman", serif;
+// $f_three: "Poppins", "Arial", sans-serif;
+$reg: 400;
+$med: 500;
+$semi: 600;
+$bold: 700;
+
+$mob_min: 320px;
+$mob_max: 767px;
+$tab_min: 767px;
+$tab_max: 1023px;
+$desk_min: 1023px;
+$desk_max: 1366px;
+$mob_pads: 15px;
+$tab_pads: 45px;
+$desk_pads: 98px;
+
+$retina_dpi: 144dpi;
+$retina_dppx: 1.5dppx;
+
+// $c_main: #a87b62;
+// $c_light: #f0eae4;
+// $c_text: #1d1613;
+// $c_text-light: #9b9997;
+// $c_line: #f6f5f4;
+// $c_hover: rgba(#564034, 0.9);

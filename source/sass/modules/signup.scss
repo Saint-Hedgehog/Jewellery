@@ -1,0 +1,54 @@
+.signup {
+  @include desktop-only {
+    padding-top: 3px;
+  }
+}
+
+.signup h2 {
+  @include title;
+
+  margin: 0;
+  margin-top: 0;
+  text-align: left;
+  letter-spacing: 0.024em;
+
+  @include tablet {
+    margin-top: 4px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  @include mobile {
+    width: auto;
+    margin-bottom: 13px;
+    text-align: left;
+  }
+}
+
+.signup p {
+  @include typography (16, 21);
+
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 33px;
+  padding-left: 1px;
+  text-align: left;
+  vertical-align: middle;
+  color: $color_text-light;
+
+  @include tablet {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 33px;
+    text-align: left;
+  }
+
+  @include mobile {
+    @include typography (16, 22);
+
+    width: auto;
+    margin-bottom: 31px;
+    padding: 0;
+    text-align: left;
+  }
+}
