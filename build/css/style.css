@@ -708,8 +708,8 @@ main {
   overflow: auto; }
   @media (max-width: 1023px) {
     .overlay {
-      min-width: 100vw;
-      min-height: 100vh; } }
+      min-width: 100%;
+      min-height: 100%; } }
 
 .overlay--transparent {
   background-color: rgba(29, 22, 19, 0.25); }
@@ -978,7 +978,7 @@ main {
     display: block;
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #a87b62; } }
 
 .page-header--no-js .main-nav {
