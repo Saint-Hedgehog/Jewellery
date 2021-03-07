@@ -2864,14 +2864,6 @@ main {
 .login__sign-up span {
   padding-left: 5px;
   color: #1d1613; }
-  .login__sign-up span:hover, .login__sign-up span:focus {
-    color: #9b9997;
-    outline: 1px solid #9b9997;
-    outline-offset: 4px;
-    transition: 0.3s ease-in-out; }
-  .login__sign-up span:active {
-    color: rgba(86, 64, 52, 0.9);
-    transition: 0.3s ease-in-out; }
   @media (max-width: 1023px) {
     .login__sign-up span {
       padding-left: 0; } }
@@ -2962,6 +2954,7 @@ main {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  min-width: 250px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -2975,6 +2968,7 @@ main {
       left: 50%;
       min-height: 100%;
       width: 100%;
+      min-width: none;
       height: 100%;
       margin-right: 0;
       transform: translateX(-50%); } }

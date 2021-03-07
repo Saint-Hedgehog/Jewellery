@@ -123,8 +123,6 @@
 }
 
 .login__sign-up span {
-  @include hover-effect($color_text-light);
-
   padding-left: 5px;
   color: $color_text;
 
