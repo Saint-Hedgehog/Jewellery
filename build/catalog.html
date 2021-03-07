@@ -30,7 +30,7 @@
                 <use xlink:href="img/sprite/sprite.svg#search"></use>
               </svg>
               <label class="visually-hidden" for="header-search">Search the website</label>
-              <input type="search" id="header-search" placeholder="Type here to search">
+              <input type="search" id="header-search" name="search" placeholder="Type here to search">
             </div>
           </form>
         </div>
@@ -138,22 +138,22 @@
                   <h3 tabindex="0">Product</h3>
                   <div class="accordion__item-container">
                     <fieldset>
-                      <input type="checkbox" id="filter-product-1" checked="">
+                      <input type="checkbox" id="filter-product-1" name="Product" value="Necklaces" checked="">
                       <label for="filter-product-1">Necklaces</label>
                     </fieldset>
                     <!--  -->
                     <fieldset>
-                      <input type="checkbox" id="filter-product-2" checked="">
+                      <input type="checkbox" id="filter-product-2" name="Product" value="Chokers" checked="">
                       <label for="filter-product-2">Chokers</label>
                     </fieldset>
                     <!--  -->
                     <fieldset>
-                      <input type="checkbox" id="filter-product-3">
+                      <input type="checkbox" id="filter-product-3" name="Product" value="Rings">
                       <label for="filter-product-3">Rings</label>
                     </fieldset>
                     <!--  -->
                     <fieldset>
-                      <input type="checkbox" id="filter-product-4" checked="">
+                      <input type="checkbox" id="filter-product-4" name="Product" value="Earrings" checked="">
                       <label for="filter-product-4">Earrings</label>
                     </fieldset>
                   </div>
@@ -163,12 +163,12 @@
                   <h3 tabindex="0">Material</h3>
                   <div class="accordion__item-container">
                     <fieldset>
-                      <input type="checkbox" id="filter-material-1" checked="">
+                      <input type="checkbox" id="filter-material-1" name="Material" value="Gold" checked="">
                       <label for="filter-material-1">Gold</label>
                     </fieldset>
                     <!--  -->
                     <fieldset>
-                      <input type="checkbox" id="filter-material-2" checked="">
+                      <input type="checkbox" id="filter-material-2" name="Material" value="Silver" checked="">
                       <label for="filter-material-2">Silver</label>
                     </fieldset>
                   </div>
@@ -178,12 +178,12 @@
                   <h3 tabindex="0">Collection</h3>
                   <div class="accordion__item-container">
                     <fieldset>
-                      <input type="checkbox" id="filter-collection-1" checked="">
+                      <input type="checkbox" id="filter-collection-1" name="Collection" value="Pink flamingo" checked="">
                       <label for="filter-collection-1">Pink flamingo</label>
                     </fieldset>
                     <!--  -->
                     <fieldset>
-                      <input type="checkbox" id="filter-collection-2" checked="">
+                      <input type="checkbox" id="filter-collection-2" name="Collection" value="Dreams" checked="">
                       <label for="filter-collection-2">Dreams</label>
                     </fieldset>
                   </div>
@@ -196,11 +196,11 @@
                       <div class="double-range__controls">
                         <div class="double-range__scale">
                           <div class="double-range__bar">
-                            <batton class="double-range__toggle double-range__toggle--min" type="button">
+                            <batton class="double-range__toggle double-range__toggle--min" type="button" tabindex="0">
                               <span class="visually-hidden">min</span>
                             </batton>
                             <!--  -->
-                            <batton class="double-range__toggle double-range__toggle--max" type="button">
+                            <batton class="double-range__toggle double-range__toggle--max" type="button" tabindex="0">
                               <span class="visually-hidden">max</span>
                             </batton>
                           </div>
@@ -472,7 +472,7 @@
         <form class="signup__form info-form info-form--on-dark-bg" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset>
             <label class="visually-hidden" for="signup-email">Enter your email</label>
-            <input type="email" id="signup-email" placeholder="Your E-mail" required="">
+            <input type="email" id="signup-email" placeholder="Your E-mail" name="signup-email" required="">
             <button class="btn-in-input btn-in-input--arrow" type="submit" aria-label="Sign Up">Sign Up</button>
           </fieldset>
         </form>
@@ -575,12 +575,12 @@
           <h2>Log In</h2>
           <fieldset>
             <label class="visually-hidden" for="login-email">Enter your email</label>
-            <input type="email" id="login-email" placeholder="Your E-mail" required="">
+            <input type="email" id="login-email" name="login-email" placeholder="Your E-mail" required="">
           </fieldset>
           <!--  -->
           <fieldset>
             <label class="visually-hidden" for="login-password">Enter your password</label>
-            <input type="password" id="login-password" placeholder="Password" required="">
+            <input type="password" id="login-password" name="login-password" placeholder="Password" required="">
           </fieldset>
           <!--  -->
           <a class="login__forgot-password" href="#" aria-label="Go to password recovery page">Forgot your password?</a>
