@@ -17,13 +17,14 @@
     @include typography (18, 23);
 
     margin-bottom: -8px;
-    padding-left: 32px;
-    padding-right: 48px;
+    margin-left: 32px;
+    margin-right: 48px;
   }
 
+
   @include mobile {
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
@@ -54,6 +55,8 @@
   &:hover,
   &:focus {
     background-color: $color_line;
+    outline: 1px solid $color_text;
+    outline-offset: -1px;
   }
 
   @include tablet {
@@ -67,7 +70,8 @@
 }
 
 .filter-form input[type="checkbox"]:focus + label::before {
-  outline: 2px solid $color_hover;
+  outline: 1px solid $color_text;
+  outline-offset: -1px;
 }
 
 .filter-form input[type="checkbox"] + label::before {
@@ -80,7 +84,7 @@
   background-color: transparent;
   border: 1px solid $color_main;
   transform: translateY(-50%);
-  outline: 0 none;
+  outline: none;
 
   @include tablet {
     width: 18px;

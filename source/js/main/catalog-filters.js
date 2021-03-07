@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+(() => {
   if (document.querySelector(`.catalog__filter-open-btn`)) {
     const showFiltersBtn = document.querySelector(`.catalog__filter-open-btn`);
     const overlay = document.querySelector(`#overlay-filter`);
@@ -9,7 +9,7 @@
 
     catalog.classList.remove(`catalog--no-js`);
 
-    const showModalHandler = function (evt) {
+    const showModalHandler = (evt) => {
       evt.preventDefault();
 
       window.utils.showModal(overlay);
@@ -18,7 +18,7 @@
       document.addEventListener(`keydown`, escPressHandler);
     };
 
-    const hideModalHandler = function () {
+    const hideModalHandler = () => {
       closeModalBtn.removeEventListener(`click`, hideModalHandler);
       overlay.removeEventListener(`click`, overlayPressHandler);
       document.removeEventListener(`keydown`, escPressHandler);
@@ -26,13 +26,13 @@
       window.utils.hideModal(overlay);
     };
 
-    const escPressHandler = function (evt) {
+    const escPressHandler = (evt) => {
       if (evt.key === `Escape`) {
         window.utils.hideModal(overlay);
       }
     };
 
-    const overlayPressHandler = function (evt) {
+    const overlayPressHandler = (evt) => {
       if (!evt.target.closest(`.js-modal`)) {
         window.utils.hideModal(overlay);
       }

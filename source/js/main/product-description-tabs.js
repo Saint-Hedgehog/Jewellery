@@ -1,16 +1,15 @@
 'use strict';
 
-// product card tabs
-(function () {
+(() => {
   if (document.querySelector(`.product__tab-btn`)) {
     const tabBtns = document.querySelectorAll(`.product__tab-btn`);
     const tabPanels = document.querySelectorAll(`.product__tab`);
     let tabName;
 
-    const switchTabHandler = function (evt) {
+    const switchTabHandler = (evt) => {
       const targetBtn = evt.target.closest(`.product__tab-btn`);
 
-      tabBtns.forEach(function (btn) {
+      tabBtns.forEach((btn) => {
         btn.classList.remove(`product__tab-btn--current`);
         btn.removeAttribute(`tabindex`);
       });
@@ -20,8 +19,8 @@
       showTabPanel();
     };
 
-    const showTabPanel = function () {
-      tabPanels.forEach(function (panel) {
+    const showTabPanel = () => {
+      tabPanels.forEach((panel) => {
         if (panel.classList.contains(tabName)) {
           panel.classList.add(`product__tab--current`);
         } else {
@@ -30,7 +29,7 @@
       });
     };
 
-    tabBtns.forEach(function (btn) {
+    tabBtns.forEach((btn) => {
       btn.addEventListener(`click`, switchTabHandler);
     });
   }

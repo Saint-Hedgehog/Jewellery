@@ -1,9 +1,9 @@
 'use strict';
 
-(function () {
+(() => {
   const body = document.querySelector(`body`);
 
-  const showModal = function (el) {
+  const showModal = (el) => {
     if (body) {
       body.classList.add(`js-no-scroll`);
     }
@@ -14,7 +14,7 @@
 
   };
 
-  const hideModal = function (el) {
+  const hideModal = (el) => {
     if (el) {
       el.classList.remove(`js-display-block`);
     }

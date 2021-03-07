@@ -11,9 +11,8 @@
   padding: 43px 42px 44px;
   text-align: left;
   background-color: transparent;
-  border: 0 none;
+  border: none;
   border-bottom: 1px solid $color_main;
-  cursor: pointer;
 
   &:first-child {
     padding-top: 43px;
@@ -25,7 +24,7 @@
   &:focus h3 {
     color: $color_main;
     transition: 0.3s ease-in-out;
-    outline: 0 none;
+    outline: none;
   }
 
   @include tablet {
@@ -97,7 +96,8 @@
 }
 
 .accordion__item p,
-.accordion__item > div {
+.accordion__item > div,
+.accordion__item--shown + .accordion__item-container {
   position: absolute;
   visibility: hidden;
   overflow: hidden;
@@ -105,7 +105,8 @@
 }
 
 .accordion__item--shown p,
-.accordion__item--shown > div {
+.accordion__item--shown > div,
+.accordion__item--shown + .accordion__item-container {
   position: static;
   display: block;
   height: max-content;
@@ -170,7 +171,8 @@
   }
 }
 
-.accordion__item--shown::after {
+.accordion__item--shown::after,
+.accordion__item--arrow-rotate::after {
   display: block;
   transform: rotate(0deg);
   transition: all 0.3s ease-out;
@@ -181,7 +183,7 @@
   --side_padding: 30px;
 
   @include tablet {
-    border: 0 none;
+    border: none;
   }
 }
 
@@ -260,6 +262,12 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+
+.accordion--mini h3 {
+  @include hover-effect($color_main);
+
+  cursor: pointer;
 }
 
 .accordion--mini p {

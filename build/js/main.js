@@ -1,26 +1,53 @@
 'use strict';
 
 (() => {
-  const accordionBlocks = document.querySelectorAll(`.accordion__item`);
+  const accordionBlocksMainPage = document.querySelectorAll(`.faq .accordion__item`);
 
-  if (accordionBlocks) {
-    accordionBlocks.forEach((item) => {
+  const accordionBlocksCatalogPage = document.querySelectorAll(`.catalog__filter-form .accordion__item`);
+  const accordionBlocks = document.querySelectorAll(`.catalog__filter-form h3`);
+
+  if (accordionBlocksMainPage) {
+    accordionBlocksMainPage.forEach((item) => {
       item.classList.remove(`accordion__item--shown`);
       item.addEventListener(`click`, (evt) => {
         evt.currentTarget.classList.toggle(`accordion__item--shown`);
       });
     });
   }
+
+  if (accordionBlocks) {
+    accordionBlocksCatalogPage.forEach((item) => {
+      item.classList.remove(`accordion__item--shown`);
+    });
+
+    accordionBlocks.forEach((item) => {
+      const toggleAccordionHendler = () => {
+        item.classList.toggle(`accordion__item--shown`);
+        item.parentNode.classList.toggle(`accordion__item--arrow-rotate`);
+      };
+
+      const enterPressHandler = (evt) => {
+        if (evt.key === `Enter`) {
+          evt.preventDefault();
+          toggleAccordionHendler();
+        }
+      };
+
+      item.classList.remove(`accordion__item--shown`);
+      item.addEventListener(`click`, toggleAccordionHendler);
+      item.addEventListener(`keydown`, enterPressHandler);
+    });
+  }
 })();
 
 'use strict';
 
-(function () {
+(() => {
   if (document.querySelector(`.js-to-cart`)) {
     const toCartBtn = document.querySelector(`.js-to-cart`);
     const overlay = document.querySelector(`#overlay-added`);
 
-    const showModalHandler = function (evt) {
+    const showModalHandler = (evt) => {
       const closeModalBtn = overlay.querySelector(`.js-close`);
 
       evt.preventDefault();
@@ -32,7 +59,7 @@
       document.addEventListener(`keydown`, escPressHandler);
     };
 
-    const hideModalHandler = function () {
+    const hideModalHandler = () => {
       const closeModalBtn = overlay.querySelector(`.js-close`);
 
       closeModalBtn.removeEventListener(`click`, hideModalHandler);
@@ -42,13 +69,13 @@
       window.utils.hideModal(overlay);
     };
 
-    const escPressHandler = function (evt) {
+    const escPressHandler = (evt) => {
       if (evt.key === `Escape`) {
         window.utils.hideModal(overlay);
       }
     };
 
-    const overlayPressHandler = function (evt) {
+    const overlayPressHandler = (evt) => {
       if (!evt.target.closest(`.js-modal`)) {
         window.utils.hideModal(overlay);
       }
@@ -60,7 +87,7 @@
 
 'use strict';
 
-(function () {
+(() => {
   if (document.querySelector(`.catalog__filter-open-btn`)) {
     const showFiltersBtn = document.querySelector(`.catalog__filter-open-btn`);
     const overlay = document.querySelector(`#overlay-filter`);
@@ -69,7 +96,7 @@
 
     catalog.classList.remove(`catalog--no-js`);
 
-    const showModalHandler = function (evt) {
+    const showModalHandler = (evt) => {
       evt.preventDefault();
 
       window.utils.showModal(overlay);
@@ -78,7 +105,7 @@
       document.addEventListener(`keydown`, escPressHandler);
     };
 
-    const hideModalHandler = function () {
+    const hideModalHandler = () => {
       closeModalBtn.removeEventListener(`click`, hideModalHandler);
       overlay.removeEventListener(`click`, overlayPressHandler);
       document.removeEventListener(`keydown`, escPressHandler);
@@ -86,13 +113,13 @@
       window.utils.hideModal(overlay);
     };
 
-    const escPressHandler = function (evt) {
+    const escPressHandler = (evt) => {
       if (evt.key === `Escape`) {
         window.utils.hideModal(overlay);
       }
     };
 
-    const overlayPressHandler = function (evt) {
+    const overlayPressHandler = (evt) => {
       if (!evt.target.closest(`.js-modal`)) {
         window.utils.hideModal(overlay);
       }
@@ -213,17 +240,16 @@
 
 'use strict';
 
-// product card tabs
-(function () {
+(() => {
   if (document.querySelector(`.product__tab-btn`)) {
     const tabBtns = document.querySelectorAll(`.product__tab-btn`);
     const tabPanels = document.querySelectorAll(`.product__tab`);
     let tabName;
 
-    const switchTabHandler = function (evt) {
+    const switchTabHandler = (evt) => {
       const targetBtn = evt.target.closest(`.product__tab-btn`);
 
-      tabBtns.forEach(function (btn) {
+      tabBtns.forEach((btn) => {
         btn.classList.remove(`product__tab-btn--current`);
         btn.removeAttribute(`tabindex`);
       });
@@ -233,8 +259,8 @@
       showTabPanel();
     };
 
-    const showTabPanel = function () {
-      tabPanels.forEach(function (panel) {
+    const showTabPanel = () => {
+      tabPanels.forEach((panel) => {
         if (panel.classList.contains(tabName)) {
           panel.classList.add(`product__tab--current`);
         } else {
@@ -243,7 +269,7 @@
       });
     };
 
-    tabBtns.forEach(function (btn) {
+    tabBtns.forEach((btn) => {
       btn.addEventListener(`click`, switchTabHandler);
     });
   }
@@ -251,36 +277,36 @@
 
 'use strict';
 
-(function () {
+(() => {
   const formsOnLightBg = document.querySelectorAll(`.search-form--on-light-bg`);
   const formsOnDarkBg = document.querySelectorAll(`.search-form--on-dark-bg`);
 
-  const toggleBackground = function () {
+  const toggleBackground = () => {
     if (formsOnLightBg) {
-      formsOnLightBg.forEach(function (form) {
+      formsOnLightBg.forEach((form) => {
         const inputSearch = form.querySelector(`input[type="search"]`);
         const container = inputSearch.closest(`.search-form__bg`);
 
-        inputSearch.addEventListener(`focus`, function () {
+        inputSearch.addEventListener(`focus`, () => {
           container.classList.add(`search-form__bg--on-light`);
         });
 
-        inputSearch.addEventListener(`blur`, function () {
+        inputSearch.addEventListener(`blur`, () => {
           container.classList.remove(`search-form__bg--on-light`);
         });
       });
     }
 
     if (formsOnDarkBg) {
-      formsOnDarkBg.forEach(function (form) {
+      formsOnDarkBg.forEach((form) => {
         const inputSearch = form.querySelector(`input[type="search"]`);
         const container = inputSearch.closest(`.search-form__bg`);
 
-        inputSearch.addEventListener(`focus`, function () {
+        inputSearch.addEventListener(`focus`, () => {
           container.classList.add(`search-form__bg--on-dark`);
         });
 
-        inputSearch.addEventListener(`blur`, function () {
+        inputSearch.addEventListener(`blur`, () => {
           container.classList.remove(`search-form__bg--on-dark`);
         });
       });
@@ -293,7 +319,7 @@
 'use strict';
 /* global Swiper */
 
-(function () {
+(() => {
   if (document.querySelector(`.slider`)) {
     new Swiper(`.slider__wrapper`, {
       navigation: {
@@ -317,7 +343,7 @@
             type: `fraction`,
             renderFraction(currentClass, totalClass, index, total) {
               return `<span class="` + currentClass + `">0 ` + index + ` </span>` +
-              ` of ` + `<span class="` + totalClass + `">0 ` + total + ` </span>`;
+                ` of ` + `<span class="` + totalClass + `">0 ` + total + ` </span>`;
             },
           },
         },
@@ -328,8 +354,7 @@
             type: `bullets`,
           },
         },
-        1024:
-        {
+        1024: {
           slidesPerView: 4,
           slidesPerGroup: 4,
           pagination: {
@@ -356,10 +381,10 @@
 
 'use strict';
 
-(function () {
+(() => {
   const body = document.querySelector(`body`);
 
-  const showModal = function (el) {
+  const showModal = (el) => {
     if (body) {
       body.classList.add(`js-no-scroll`);
     }
@@ -370,7 +395,7 @@
 
   };
 
-  const hideModal = function (el) {
+  const hideModal = (el) => {
     if (el) {
       el.classList.remove(`js-display-block`);
     }

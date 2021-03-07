@@ -1,14 +1,41 @@
 'use strict';
 
 (() => {
-  const accordionBlocks = document.querySelectorAll(`.accordion__item`);
+  const accordionBlocksMainPage = document.querySelectorAll(`.faq .accordion__item`);
 
-  if (accordionBlocks) {
-    accordionBlocks.forEach((item) => {
+  const accordionBlocksCatalogPage = document.querySelectorAll(`.catalog__filter-form .accordion__item`);
+  const accordionBlocks = document.querySelectorAll(`.catalog__filter-form h3`);
+
+  if (accordionBlocksMainPage) {
+    accordionBlocksMainPage.forEach((item) => {
       item.classList.remove(`accordion__item--shown`);
       item.addEventListener(`click`, (evt) => {
         evt.currentTarget.classList.toggle(`accordion__item--shown`);
       });
+    });
+  }
+
+  if (accordionBlocks) {
+    accordionBlocksCatalogPage.forEach((item) => {
+      item.classList.remove(`accordion__item--shown`);
+    });
+
+    accordionBlocks.forEach((item) => {
+      const toggleAccordionHendler = () => {
+        item.classList.toggle(`accordion__item--shown`);
+        item.parentNode.classList.toggle(`accordion__item--arrow-rotate`);
+      };
+
+      const enterPressHandler = (evt) => {
+        if (evt.key === `Enter`) {
+          evt.preventDefault();
+          toggleAccordionHendler();
+        }
+      };
+
+      item.classList.remove(`accordion__item--shown`);
+      item.addEventListener(`click`, toggleAccordionHendler);
+      item.addEventListener(`keydown`, enterPressHandler);
     });
   }
 })();

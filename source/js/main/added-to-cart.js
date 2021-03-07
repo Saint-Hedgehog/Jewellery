@@ -1,11 +1,11 @@
 'use strict';
 
-(function () {
+(() => {
   if (document.querySelector(`.js-to-cart`)) {
     const toCartBtn = document.querySelector(`.js-to-cart`);
     const overlay = document.querySelector(`#overlay-added`);
 
-    const showModalHandler = function (evt) {
+    const showModalHandler = (evt) => {
       const closeModalBtn = overlay.querySelector(`.js-close`);
 
       evt.preventDefault();
@@ -17,7 +17,7 @@
       document.addEventListener(`keydown`, escPressHandler);
     };
 
-    const hideModalHandler = function () {
+    const hideModalHandler = () => {
       const closeModalBtn = overlay.querySelector(`.js-close`);
 
       closeModalBtn.removeEventListener(`click`, hideModalHandler);
@@ -27,13 +27,13 @@
       window.utils.hideModal(overlay);
     };
 
-    const escPressHandler = function (evt) {
+    const escPressHandler = (evt) => {
       if (evt.key === `Escape`) {
         window.utils.hideModal(overlay);
       }
     };
 
-    const overlayPressHandler = function (evt) {
+    const overlayPressHandler = (evt) => {
       if (!evt.target.closest(`.js-modal`)) {
         window.utils.hideModal(overlay);
       }

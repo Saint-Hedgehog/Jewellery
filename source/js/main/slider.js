@@ -1,7 +1,7 @@
 'use strict';
 /* global Swiper */
 
-(function () {
+(() => {
   if (document.querySelector(`.slider`)) {
     new Swiper(`.slider__wrapper`, {
       navigation: {
@@ -25,7 +25,7 @@
             type: `fraction`,
             renderFraction(currentClass, totalClass, index, total) {
               return `<span class="` + currentClass + `">0 ` + index + ` </span>` +
-              ` of ` + `<span class="` + totalClass + `">0 ` + total + ` </span>`;
+                ` of ` + `<span class="` + totalClass + `">0 ` + total + ` </span>`;
             },
           },
         },
@@ -36,8 +36,7 @@
             type: `bullets`,
           },
         },
-        1024:
-        {
+        1024: {
           slidesPerView: 4,
           slidesPerGroup: 4,
           pagination: {

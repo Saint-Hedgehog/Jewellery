@@ -28,7 +28,7 @@
   margin: 0;
   padding: 10px 0 8px;
   background-color: transparent;
-  border: 0 none;
+  border: none;
 
   @include mobile {
     width: 187px;
@@ -38,7 +38,7 @@
 .info-form input:active,
 .info-form input:focus {
   background-color: transparent;
-  outline: 0 none;
+  outline: none;
 }
 
 .info-form input[type="email"]::placeholder {

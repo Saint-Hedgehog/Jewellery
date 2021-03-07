@@ -134,9 +134,9 @@
             <!--  -->
             <form class="catalog__filter-form filter-form" action="https://echo.htmlacademy.ru" method="POST">
               <div class="filter-form__accordion accordion accordion--mini">
-                <div class="accordion__item accordion__item--shown" tabindex="0">
-                  <h3>Product</h3>
-                  <div>
+                <div class="accordion__item accordion__item--shown">
+                  <h3 tabindex="0">Product</h3>
+                  <div class="accordion__item-container">
                     <fieldset>
                       <input type="checkbox" id="filter-product-1" checked="">
                       <label for="filter-product-1">Necklaces</label>
@@ -159,9 +159,9 @@
                   </div>
                 </div>
                 <!--  -->
-                <div class="accordion__item accordion__item--shown" tabindex="0">
-                  <h3>Material</h3>
-                  <div>
+                <div class="accordion__item accordion__item--shown">
+                  <h3 tabindex="0">Material</h3>
+                  <div class="accordion__item-container">
                     <fieldset>
                       <input type="checkbox" id="filter-material-1" checked="">
                       <label for="filter-material-1">Gold</label>
@@ -174,9 +174,9 @@
                   </div>
                 </div>
                 <!--  -->
-                <div class="accordion__item accordion__item--shown" tabindex="0">
-                  <h3>Collection</h3>
-                  <div>
+                <div class="accordion__item accordion__item--shown">
+                  <h3 tabindex="0">Collection</h3>
+                  <div class="accordion__item-container">
                     <fieldset>
                       <input type="checkbox" id="filter-collection-1" checked="">
                       <label for="filter-collection-1">Pink flamingo</label>
@@ -189,22 +189,27 @@
                   </div>
                 </div>
                 <!--  -->
-                <div class="accordion__item accordion__item--shown" tabindex="0">
-                  <h3>Price</h3>
-                  <div>
+                <div class="accordion__item accordion__item--shown">
+                  <h3 tabindex="0">Price</h3>
+                  <div class="accordion__item-container">
                     <div class="double-range">
                       <div class="double-range__controls">
                         <div class="double-range__scale">
                           <div class="double-range__bar">
-                            <div class="double-range__toggle double-range__toggle--min" tabindex="0"></div>
-                            <div class="double-range__toggle double-range__toggle--max" tabindex="0"></div>
+                            <batton class="double-range__toggle double-range__toggle--min" type="button">
+                              <span class="visually-hidden">min</span>
+                            </batton>
+                            <!--  -->
+                            <batton class="double-range__toggle double-range__toggle--max" type="button">
+                              <span class="visually-hidden">max</span>
+                            </batton>
                           </div>
                         </div>
                       </div>
                       <!--  -->
                       <div class="double-range__price-controls">
-                        <label>$ <input type="text" name="min-price" value="55"></label>
-                        <label>$ <input type="text" name="max-price" value="155"></label>
+                        <label>$ <input type="text" name="min-price" pattern="[0-9]+" value="55"></label>
+                        <label>$ <input type="text" name="max-price" pattern="[0-9]+" value="155"></label>
                       </div>
                     </div>
                   </div>

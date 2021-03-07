@@ -42,7 +42,7 @@
   padding: 8px 20px;
   font-family: $poppins;
   background-color: transparent;
-  border: 0 none;
+  border: none;
 
   @include mobile {
     width: 85.42%;
@@ -57,8 +57,8 @@
 }
 
 .search-form input[type="search"]:focus {
-  outline: 0 none;
-  border: 0 none;
+  outline: none;
+  border: none;
 }
 
 .search-form__bg--on-light {

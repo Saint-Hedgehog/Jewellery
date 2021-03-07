@@ -90,7 +90,7 @@
 
   &:hover,
   &:focus {
-    outline: 0 none;
+    outline: none;
   }
 
   @include mobile {

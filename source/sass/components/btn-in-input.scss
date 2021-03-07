@@ -9,7 +9,7 @@
   padding-right: 42px;
   color: $white;
   background-color: $black;
-  border: 0 none;
+  border: none;
 
   &--arrow {
     background-image: url("../img/footer-arrow-white.svg");
@@ -19,7 +19,7 @@
 
     &:hover,
     &:focus {
-      outline: 0 none;
+      outline: none;
     }
   }
 }
