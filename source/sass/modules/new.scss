@@ -96,3 +96,9 @@
     left: 0;
   }
 }
+
+.new--product .pagination__list-item {
+  @include desktop-only {
+    filter: drop-shadow(0 4px 4px rgba($black, 0.25));
+  }
+}
