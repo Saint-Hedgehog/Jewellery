@@ -169,10 +169,14 @@
         <h2>The good stuff in&nbsp;your inbox</h2>
         <p>News and updates from CH. No&nbsp;spam,&nbsp;we promise.</p>
         <!--  -->
-        <form class="signup__form info-form info-form--on-dark-bg" action="https://echo.htmlacademy.ru" method="POST">
+        <form class="signup__form info-form" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset>
-            <label class="visually-hidden" for="signup-email">Enter your email</label>
-            <input type="email" id="signup-email" placeholder="Your E-mail" name="signup-email" required>
+            <input type="email" id="signup-email" placeholder="&nbsp;" name="signup-email" required>
+            <label class="signup__label-name" for="signup-email">
+              <span class="signup__content-name">
+                Your E-mail
+              </span>
+            </label>
             <button class="btn-in-input btn-in-input--arrow" type="submit" aria-label="Sign Up">Sign Up</button>
           </fieldset>
         </form>
@@ -271,16 +275,24 @@
   <div class="overlay overlay--transparent" id="overlay-login">
     <div class="popup js-modal">
       <section class="login">
-        <form class="login__form info-form info-form--on-light-bg" action="https://echo.htmlacademy.ru" method="POST">
+        <form class="login__form info-form" action="https://echo.htmlacademy.ru" method="POST">
           <h2>Log In</h2>
           <fieldset>
-            <label class="visually-hidden" for="login-email">Enter your email</label>
-            <input type="email" id="login-email" name="login-email" placeholder="Your E-mail" required>
+            <input type="email" id="login-email" placeholder="&nbsp;" name="login-email" required>
+            <label class="login__label-name" for="login-email">
+              <span class="login__content-name">
+                Your E-mail
+              </span>
+            </label>
           </fieldset>
           <!--  -->
           <fieldset>
-            <label class="visually-hidden" for="login-password">Enter your password</label>
-            <input type="password" id="login-password" name="login-password" placeholder="Password" required>
+            <input type="Password" id="login-password" placeholder="&nbsp;" name="login-password" required>
+            <label class="login__label-name" for="login-password">
+              <span class="login__content-name">
+                Password
+              </span>
+            </label>
           </fieldset>
           <!--  -->
           <a class="login__forgot-password" href="#" aria-label="Go to password recovery page">Forgot your password?</a>

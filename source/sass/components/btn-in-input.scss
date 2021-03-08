@@ -12,10 +12,13 @@
   border: none;
 
   &--arrow {
+    position: relative;
+    top: -2px;
+    padding-top: 26px;
     background-image: url("../img/footer-arrow-white.svg");
     background-repeat: no-repeat;
     background-size: 29px 9px;
-    background-position: 100% 50%;
+    background-position: 100% 74.5%;
 
     &:hover,
     &:focus {

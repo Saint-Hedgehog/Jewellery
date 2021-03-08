@@ -627,10 +627,13 @@ main {
     opacity: 0.3;
     transition: 0.3s ease-in-out; }
   .btn-in-input--arrow {
+    position: relative;
+    top: -2px;
+    padding-top: 26px;
     background-image: url("../img/footer-arrow-white.svg");
     background-repeat: no-repeat;
     background-size: 29px 9px;
-    background-position: 100% 50%; }
+    background-position: 100% 74.5%; }
     .btn-in-input--arrow:hover, .btn-in-input--arrow:focus {
       outline: none; }
 
@@ -2500,7 +2503,7 @@ main {
   line-height: 1.3125rem;
   display: inline-block;
   margin-top: 10px;
-  margin-bottom: 33px;
+  margin-bottom: 10px;
   padding-left: 1px;
   text-align: left;
   vertical-align: middle;
@@ -2542,13 +2545,17 @@ main {
   padding: 0;
   border: 0;
   border-radius: 0;
+  position: relative;
   flex-wrap: nowrap;
   width: 100%;
-  margin-bottom: 24px; }
+  height: 64px;
+  margin-bottom: 1px;
+  border: none;
+  overflow: hidden; }
   @media (max-width: 767px) {
     .info-form fieldset {
       max-width: 450px;
-      margin-bottom: 19px; } }
+      margin-bottom: -4px; } }
   .info-form fieldset:last-of-type {
     margin-bottom: 0; }
 
@@ -2558,37 +2565,90 @@ main {
   flex-grow: 1;
   width: 100%;
   margin: 0;
-  padding: 10px 0 8px;
+  padding-top: 32px;
+  padding-bottom: 9px;
   background-color: transparent;
-  border: none; }
+  border: none;
+  box-shadow: none; }
   @media (max-width: 767px) {
     .info-form input {
       width: 187px; } }
 
-.info-form input:active,
-.info-form input:focus {
-  background-color: transparent;
-  outline: none; }
-
-.info-form input[type="email"]::-moz-placeholder {
-  font-size: 0.875rem;
-  line-height: 1.3125rem; }
-
-.info-form input[type="email"]::placeholder {
-  font-size: 0.875rem;
-  line-height: 1.3125rem; }
-
-.info-form--on-dark-bg input {
+.info-form.signup__form input {
+  padding-right: 6%;
+  box-shadow: none;
   color: #ffffff; }
 
-.info-form--on-dark-bg fieldset {
+.info-form label {
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #1d1613; }
+
+.info-form.signup__form label {
   border-bottom: 1px solid #ffffff; }
 
-.info-form--on-light-bg input {
-  color: #1d1613; }
+.info-form label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid #a87b62;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out; }
 
-.info-form--on-light-bg fieldset {
-  border-bottom: 1px solid #1d1613; }
+.info-form .login__content-name,
+.info-form .signup__content-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 9px;
+  color: #9b9997;
+  transition: all 0.3s ease-in-out; }
+
+.info-form input:focus {
+  outline: none; }
+
+.info-form input:hover + .login__label-name .login__content-name,
+.info-form input:hover + .signup__label-name .signup__content-name {
+  color: #a87b62; }
+
+.info-form input:not(:-moz-placeholder-shown) + .login__label-name .login__content-name, .info-form input:not(:-moz-placeholder-shown) + .signup__label-name .signup__content-name {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  transform: translateY(-100%);
+  left: 0;
+  color: #ff0000; }
+
+.info-form input:focus + .login__label-name .login__content-name,
+.info-form input:not(:placeholder-shown) + .login__label-name .login__content-name,
+.info-form input:focus + .signup__label-name .signup__content-name,
+.info-form input:not(:placeholder-shown) + .signup__label-name .signup__content-name {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  transform: translateY(-100%);
+  left: 0;
+  color: #ff0000; }
+
+.info-form input:valid + .login__label-name .login__content-name,
+.info-form input:valid + .signup__label-name .signup__content-name {
+  color: #a87b62; }
+
+.info-form input:not(:-moz-placeholder-shown) + .login__label-name::after, .info-form input:not(:-moz-placeholder-shown) + .signup__label-name::after {
+  transform: translateX(0%); }
+
+.info-form input:focus + .login__label-name::after,
+.info-form input:not(:placeholder-shown) + .login__label-name::after,
+.info-form input:focus + .signup__label-name::after,
+.info-form input:not(:placeholder-shown) + .signup__label-name::after {
+  transform: translateX(0%); }
 
 .footer-nav {
   display: flex;
@@ -2780,7 +2840,7 @@ main {
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 23px; }
+  margin-bottom: 0; }
   @media (max-width: 1023px) {
     .login__form h2 {
       margin-top: 29px;
@@ -2788,12 +2848,12 @@ main {
   @media (max-width: 1023px) {
     .login__form h2 {
       margin-top: 25px;
-      margin-bottom: 23px; } }
+      margin-bottom: 0; } }
   @media (max-width: 767px) {
     .login__form h2 {
       font-size: 1.5rem;
       line-height: 1.9375rem;
-      margin-bottom: 16px; } }
+      margin-bottom: -7px; } }
 
 .login__form button[ty-e="submit"] {
   margin-top: auto;

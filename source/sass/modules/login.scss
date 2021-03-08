@@ -57,17 +57,17 @@
 .login__form h2 {
   @include title;
 
-  margin-bottom: 23px;
+  margin-bottom: 0;
 
   @include tablet {
     margin-top: 25px;
-    margin-bottom: 23px;
+    margin-bottom: 0;
   }
 
   @include mobile {
     @include typography (24, 31);
 
-    margin-bottom: 16px;
+    margin-bottom: -7px;
   }
 }
 

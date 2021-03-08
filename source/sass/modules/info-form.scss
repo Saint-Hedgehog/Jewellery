@@ -6,13 +6,17 @@
   @include flex(row);
   @include fieldset-reset;
 
+  position: relative;
   flex-wrap: nowrap;
   width: 100%;
-  margin-bottom: 24px;
+  height: 64px;
+  margin-bottom: 1px;
+  border: none;
+  overflow: hidden;
 
   @include mobile {
     max-width: 450px;
-    margin-bottom: 19px;
+    margin-bottom: -4px;
   }
 
   &:last-of-type {
@@ -26,37 +30,89 @@
   flex-grow: 1;
   width: 100%;
   margin: 0;
-  padding: 10px 0 8px;
+  padding-top: 32px;
+  padding-bottom: 9px;
   background-color: transparent;
   border: none;
+  box-shadow: none;
 
   @include mobile {
     width: 187px;
   }
 }
 
-.info-form input:active,
-.info-form input:focus {
-  background-color: transparent;
-  outline: none;
-}
-
-.info-form input[type="email"]::placeholder {
-  @include typography (14, 21);
-}
-
-.info-form--on-dark-bg input {
+.info-form.signup__form input {
+  padding-right: 6%;
+  box-shadow: none;
   color: $white;
 }
 
-.info-form--on-dark-bg fieldset {
+.info-form label {
+  @include typography (14, 21);
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid $color_text;
+}
+
+.info-form.signup__form label {
   border-bottom: 1px solid $white;
 }
 
-.info-form--on-light-bg input {
-  color: $color_text;
+.info-form label::after {
+  @include pseudo;
+
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid $color_main;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
 }
 
-.info-form--on-light-bg fieldset {
-  border-bottom: 1px solid $color_text;
+.info-form .login__content-name,
+.info-form .signup__content-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 9px;
+  color: $color_text-light;
+  transition: all 0.3s ease-in-out;
+}
+
+.info-form input:focus {
+  outline: none;
+}
+
+.info-form input:hover + .login__label-name .login__content-name,
+.info-form input:hover + .signup__label-name .signup__content-name {
+  color: $color_main;
+}
+
+
+.info-form input:focus + .login__label-name .login__content-name,
+.info-form input:not(:placeholder-shown) + .login__label-name .login__content-name,
+.info-form input:focus + .signup__label-name .signup__content-name,
+.info-form input:not(:placeholder-shown) + .signup__label-name .signup__content-name {
+  @include typography (12, 16);
+
+  transform: translateY(-100%);
+  left: 0;
+  color: $red;
+}
+
+.info-form input:valid + .login__label-name .login__content-name,
+.info-form input:valid + .signup__label-name .signup__content-name {
+  color: $color_main;
+}
+
+.info-form input:focus + .login__label-name::after,
+.info-form input:not(:placeholder-shown) + .login__label-name::after,
+.info-form input:focus + .signup__label-name::after,
+.info-form input:not(:placeholder-shown) + .signup__label-name::after {
+  transform: translateX(0%);
 }
