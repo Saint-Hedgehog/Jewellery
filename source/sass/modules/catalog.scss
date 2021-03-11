@@ -133,6 +133,10 @@
   }
 }
 
+.catalog__filter-wrapper.js-modal {
+  padding: 0;
+}
+
 .catalog__wrapper {
   @include flex(row);
 
