@@ -4062,8 +4062,8 @@ main {
     opacity: 0.4; }
 
 .added-to-cart__quantity-btn--plus::after {
-  left: 50%;
-  transform: translate(-50%) rotate(90deg); }
+  left: 1px;
+  transform: rotate(90deg); }
 
 .added-to-cart__quantity-btn--plus::before {
   left: 1px; }
