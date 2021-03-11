@@ -272,31 +272,33 @@
   <!-- ============== -->
   <div class="overlay overlay--transparent" id="overlay-login">
     <div class="popup popup--center js-modal">
-      <section class="login login__form info-form">
-        <form action="https://echo.htmlacademy.ru" method="POST">
-          <h2>Log In</h2>
-          <fieldset>
-            <input type="email" id="login-email" placeholder="&nbsp;" name="login-email" required>
-            <label class="login__label-name" for="login-email">
-              <span class="login__content-name">
-                Your E-mail
-              </span>
-            </label>
-          </fieldset>
-          <!--  -->
-          <fieldset>
-            <input type="password" id="login-password" placeholder="&nbsp;" name="login-password" required>
-            <label class="login__label-name" for="login-password">
-              <span class="login__content-name">
-                Password
-              </span>
-            </label>
-          </fieldset>
-          <!--  -->
-          <a class="login__forgot-password" href="#" aria-label="Go to password recovery page">Forgot your password?</a>
-          <button class="btn js-submit" type="submit" aria-label="Log In">Log In</button>
-          <a class="login__sign-up" href="#" aria-label="Go to Sign up page">Don’t have an account? <span>Sign up</span></a>
-        </form>
+      <section class="login">
+        <div class="login__form info-form">
+          <form action="https://echo.htmlacademy.ru" method="POST">
+            <h2>Log In</h2>
+            <fieldset>
+              <input type="email" id="login-email" placeholder="&nbsp;" name="login-email" required>
+              <label class="login__label-name" for="login-email">
+                <span class="login__content-name">
+                  Your E-mail
+                </span>
+              </label>
+            </fieldset>
+            <!--  -->
+            <fieldset>
+              <input type="password" id="login-password" placeholder="&nbsp;" name="login-password" required>
+              <label class="login__label-name" for="login-password">
+                <span class="login__content-name">
+                  Password
+                </span>
+              </label>
+            </fieldset>
+            <!--  -->
+            <a class="login__forgot-password" href="#" aria-label="Go to password recovery page">Forgot your password?</a>
+            <button class="btn js-submit" type="submit" aria-label="Log In">Log In</button>
+            <a class="login__sign-up" href="#" aria-label="Go to Sign up page">Don’t have an account? <span>Sign up</span></a>
+          </form>
+        </div>
       </section>
       <!--  -->
       <button class="popup__close-btn btn-close js-close" type="button">
