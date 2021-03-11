@@ -3,7 +3,7 @@
 
 (() => {
   if (document.querySelector(`.slider`)) {
-    new Swiper(`.slider__wrapper`, {
+    const slider = new Swiper(`.slider__wrapper`, {
       navigation: {
         nextEl: `.slider__btn--next`,
         prevEl: `.slider__btn--previous`,
@@ -54,6 +54,23 @@
         onlyInViewport: true,
       },
       autoHeight: true,
+      watchSlidesVisibility: true,
     });
+
+    slider.on(`progress`, () => {
+      inertNotVisible();
+    });
+
+    const inertNotVisible = () => {
+      slider.slides.forEach((slide) => {
+        if (!slide.classList.contains(`swiper-slide-visible`)) {
+          slide.childNodes[1].setAttribute(`tabindex`, `-1`);
+        } else {
+          slide.childNodes[1].setAttribute(`tabindex`, `0`);
+        }
+      });
+    };
+
+    inertNotVisible();
   }
 })();
