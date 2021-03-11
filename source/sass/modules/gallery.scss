@@ -73,20 +73,20 @@
   }
 
   @include mobile {
-    &:nth-last-of-type(1) {
+    &:nth-last-of-type(5n + 1) {
       display: none;
     }
 
-    &:nth-last-of-type(2) {
+    &:nth-last-of-type(5n + 2) {
       flex-direction: row-reverse;
       width: 100%;
     }
 
-    &:nth-last-of-type(3) {
+    &:nth-last-of-type(5n + 3) {
       width: 50%;
     }
 
-    &:nth-last-of-type(4) {
+    &:nth-last-of-type(5n + 4) {
       width: 44.83%;
     }
   }

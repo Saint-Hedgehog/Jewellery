@@ -23,15 +23,17 @@
   <header class="page-header page-header--no-js page-header--nav-open">
     <div class="page-header__top-wrapper">
       <div class="page-header__top-container container">
-        <div class="page-header__search">
-          <form class="search-form search-form--on-light-bg" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="page-header__search search-form search-form--on-light-bg">
+          <form action="https://echo.htmlacademy.ru" method="POST">
             <div class="search-form__bg">
-              <svg width="14" height="14">
-                <use xlink:href="img/sprite/sprite.svg#search"></use>
-              </svg>
-              <label class="visually-hidden" for="header-search">Search the website</label>
+              <label for="header-search">
+                <svg width="14" height="14">
+                  <use xlink:href="img/sprite/sprite.svg#search"></use>
+                </svg>
+                <span class="visually-hidden">Search the website</span>
+              </label>
               <input type="search" id="header-search" name="search" placeholder="Type here to search">
-            </div>
+            </в>
           </form>
         </div>
         <!--  -->
@@ -42,30 +44,26 @@
           </svg>
         </button>
         <!--  -->
-        <div class="page-header__logo">
-          <a href="index.html" class="page-header__logo-link" aria-label="Go to main page">
-            <svg width="66" height="66">
-              <use xlink:href="img/sprite/sprite.svg#logo"></use>
-            </svg>
-          </a>
-        </div>
+        <a href="index.html" class="page-header__logo-link" aria-label="Go to main page">
+          <svg width="66" height="66">
+            <use xlink:href="img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </a>
         <!--  -->
-        <div class="page-header__user">
-          <ul class="page-header__user-list">
-            <li class="page-header__user-item">
-              <a class="page-header__user-link page-header__user-link--login js-login" href="login.html" aria-label="Login">Login</a>
-            </li>
-            <!--  -->
-            <li class="page-header__user-item">
-              <a class="page-header__user-link page-header__user-link--cart" href="#" aria-label="Cart">
-                <span>Cart 0</span>
-                <svg width="20" height="18">
-                  <use xlink:href="img/sprite/sprite.svg#cart"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul class="page-header__user-list">
+          <li class="page-header__user-item">
+            <a class="page-header__user-link page-header__user-link--login js-login" href="login.html#login-page" aria-label="Login">Login</a>
+          </li>
+          <!--  -->
+          <li class="page-header__user-item">
+            <a class="page-header__user-link page-header__user-link--cart" href="#" aria-label="Cart">
+              <span>Cart 0</span>
+              <svg width="20" height="18">
+                <use xlink:href="img/sprite/sprite.svg#cart"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
     <!--  -->
@@ -106,7 +104,7 @@
             <a class="main-nav__link main-nav__link--secondary" href="#" aria-label="Go to the Contact Us page">Contact Us</a>
           </li>
         </ul>
-        <a class="main-nav__link main-nav__link--login js-login" href="login.html" aria-label="Login">Login</a>
+        <a class="main-nav__link main-nav__link--login js-login" href="login.html#login-page" aria-label="Login">Login</a>
       </div>
     </nav>
   </header>
@@ -134,93 +132,95 @@
                 <span class="visually-hidden">Close filters</span>
               </button>
               <!--  -->
-              <form class="catalog__filter-form filter-form" action="https://echo.htmlacademy.ru" method="POST">
-                <div class="filter-form__accordion accordion accordion--mini">
-                  <div class="accordion__item accordion__item--shown">
-                    <h3 tabindex="0">Product</h3>
-                    <div class="accordion__item-container">
-                      <fieldset>
-                        <input type="checkbox" id="filter-product-1" name="Product" value="Necklaces" checked>
-                        <label for="filter-product-1">Necklaces</label>
-                      </fieldset>
-                      <!--  -->
-                      <fieldset>
-                        <input type="checkbox" id="filter-product-2" name="Product" value="Chokers" checked>
-                        <label for="filter-product-2">Chokers</label>
-                      </fieldset>
-                      <!--  -->
-                      <fieldset>
-                        <input type="checkbox" id="filter-product-3" name="Product" value="Rings">
-                        <label for="filter-product-3">Rings</label>
-                      </fieldset>
-                      <!--  -->
-                      <fieldset>
-                        <input type="checkbox" id="filter-product-4" name="Product" value="Earrings" checked>
-                        <label for="filter-product-4">Earrings</label>
-                      </fieldset>
+              <div class="catalog__filter-form filter-form">
+                <form action="https://echo.htmlacademy.ru" method="POST">
+                  <div class="filter-form__accordion accordion accordion--mini">
+                    <div class="accordion__item accordion__item--shown">
+                      <h3 tabindex="0">Product</h3>
+                      <div class="accordion__item-container">
+                        <fieldset>
+                          <input type="checkbox" id="filter-product-1" name="Product" value="Necklaces" checked>
+                          <label for="filter-product-1">Necklaces</label>
+                        </fieldset>
+                        <!--  -->
+                        <fieldset>
+                          <input type="checkbox" id="filter-product-2" name="Product" value="Chokers" checked>
+                          <label for="filter-product-2">Chokers</label>
+                        </fieldset>
+                        <!--  -->
+                        <fieldset>
+                          <input type="checkbox" id="filter-product-3" name="Product" value="Rings">
+                          <label for="filter-product-3">Rings</label>
+                        </fieldset>
+                        <!--  -->
+                        <fieldset>
+                          <input type="checkbox" id="filter-product-4" name="Product" value="Earrings" checked>
+                          <label for="filter-product-4">Earrings</label>
+                        </fieldset>
+                      </div>
                     </div>
-                  </div>
-                  <!--  -->
-                  <div class="accordion__item accordion__item--shown">
-                    <h3 tabindex="0">Material</h3>
-                    <div class="accordion__item-container">
-                      <fieldset>
-                        <input type="checkbox" id="filter-material-1" name="Material" value="Gold" checked>
-                        <label for="filter-material-1">Gold</label>
-                      </fieldset>
-                      <!--  -->
-                      <fieldset>
-                        <input type="checkbox" id="filter-material-2" name="Material" value="Silver" checked>
-                        <label for="filter-material-2">Silver</label>
-                      </fieldset>
+                    <!--  -->
+                    <div class="accordion__item accordion__item--shown">
+                      <h3 tabindex="0">Material</h3>
+                      <div class="accordion__item-container">
+                        <fieldset>
+                          <input type="checkbox" id="filter-material-1" name="Material" value="Gold" checked>
+                          <label for="filter-material-1">Gold</label>
+                        </fieldset>
+                        <!--  -->
+                        <fieldset>
+                          <input type="checkbox" id="filter-material-2" name="Material" value="Silver" checked>
+                          <label for="filter-material-2">Silver</label>
+                        </fieldset>
+                      </div>
                     </div>
-                  </div>
-                  <!--  -->
-                  <div class="accordion__item accordion__item--shown">
-                    <h3 tabindex="0">Collection</h3>
-                    <div class="accordion__item-container">
-                      <fieldset>
-                        <input type="checkbox" id="filter-collection-1" name="Collection" value="Pink flamingo" checked>
-                        <label for="filter-collection-1">Pink flamingo</label>
-                      </fieldset>
-                      <!--  -->
-                      <fieldset>
-                        <input type="checkbox" id="filter-collection-2" name="Collection" value="Dreams" checked>
-                        <label for="filter-collection-2">Dreams</label>
-                      </fieldset>
+                    <!--  -->
+                    <div class="accordion__item accordion__item--shown">
+                      <h3 tabindex="0">Collection</h3>
+                      <div class="accordion__item-container">
+                        <fieldset>
+                          <input type="checkbox" id="filter-collection-1" name="Collection" value="Pink flamingo" checked>
+                          <label for="filter-collection-1">Pink flamingo</label>
+                        </fieldset>
+                        <!--  -->
+                        <fieldset>
+                          <input type="checkbox" id="filter-collection-2" name="Collection" value="Dreams" checked>
+                          <label for="filter-collection-2">Dreams</label>
+                        </fieldset>
+                      </div>
                     </div>
-                  </div>
-                  <!--  -->
-                  <div class="accordion__item accordion__item--shown">
-                    <h3 tabindex="0">Price</h3>
-                    <div class="accordion__item-container">
-                      <div class="double-range">
-                        <div class="double-range__controls">
-                          <div class="double-range__scale">
-                            <div class="double-range__bar">
-                              <span class="double-range__toggle double-range__toggle--min" tabindex="0">
-                                <span class="visually-hidden">min</span>
-                              </span>
-                              <!--  -->
-                              <span class="double-range__toggle double-range__toggle--max" tabindex="0">
-                                <span class="visually-hidden">max</span>
-                              </span>
+                    <!--  -->
+                    <div class="accordion__item accordion__item--shown">
+                      <h3 tabindex="0">Price</h3>
+                      <div class="accordion__item-container">
+                        <div class="double-range">
+                          <div class="double-range__controls">
+                            <div class="double-range__scale">
+                              <div class="double-range__bar">
+                                <span class="double-range__toggle double-range__toggle--min" tabindex="0">
+                                  <span class="visually-hidden">min</span>
+                                </span>
+                                <!--  -->
+                                <span class="double-range__toggle double-range__toggle--max" tabindex="0">
+                                  <span class="visually-hidden">max</span>
+                                </span>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <!--  -->
-                        <div class="double-range__price-controls">
-                          <label>$ <input type="text" name="min-price" pattern="[0-9]+" value="55"></label>
-                          <label>$ <input type="text" name="max-price" pattern="[0-9]+" value="155"></label>
+                          <!--  -->
+                          <div class="double-range__price-controls">
+                            <label>$ <input type="text" name="min-price" pattern="[0-9]+" value="55"></label>
+                            <label>$ <input type="text" name="max-price" pattern="[0-9]+" value="155"></label>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <!--  -->
-                <button class="btn" type="submit" aria-label="Apply">Apply</button>
-                <button class="btn btn--ghost" type="reset" aria-label="Clear All">Clear All</button>
-              </form>
+                  <!--  -->
+                  <button class="btn" type="submit" aria-label="Apply">Apply</button>
+                  <button class="btn btn--ghost" type="reset" aria-label="Clear All">Clear All</button>
+                </form>
+              </div>
             </div>
           </aside>
           <!--  -->
@@ -484,17 +484,19 @@
         <h2>The good stuff in&nbsp;your inbox</h2>
         <p>News and updates from CH. No&nbsp;spam,&nbsp;we promise.</p>
         <!--  -->
-        <form class="signup__form info-form" action="https://echo.htmlacademy.ru" method="POST">
-          <fieldset>
-            <input type="email" id="signup-email" placeholder="&nbsp;" name="signup-email" required>
-            <label class="signup__label-name" for="signup-email">
-              <span class="signup__content-name">
-                Your E-mail
-              </span>
-            </label>
-            <button class="btn-in-input btn-in-input--arrow" type="submit" aria-label="Sign Up">Sign Up</button>
-          </fieldset>
-        </form>
+        <div class="signup__form info-form">
+          <form action="https://echo.htmlacademy.ru" method="POST">
+            <fieldset>
+              <input type="email" id="signup-email" placeholder="&nbsp;" name="signup-email" required>
+              <label class="signup__label-name" for="signup-email">
+                <span class="signup__content-name">
+                  Your E-mail
+                </span>
+              </label>
+              <button class="btn-in-input btn-in-input--arrow" type="submit" aria-label="Sign Up">Sign Up</button>
+            </fieldset>
+          </form>
+        </div>
       </div>
       <!--  -->
       <div class="page-footer__nav footer-nav footer-nav">
@@ -589,8 +591,8 @@
   <!-- ============== -->
   <div class="overlay overlay--transparent" id="overlay-login">
     <div class="popup js-modal">
-      <section class="login">
-        <form class="login__form info-form" action="https://echo.htmlacademy.ru" method="POST">
+      <section class="login login__form info-form">
+        <form action="https://echo.htmlacademy.ru" method="POST">
           <h2>Log In</h2>
           <fieldset>
             <input type="email" id="login-email" placeholder="&nbsp;" name="login-email" required>
@@ -602,7 +604,7 @@
           </fieldset>
           <!--  -->
           <fieldset>
-            <input type="Password" id="login-password" placeholder="&nbsp;" name="login-password" required>
+            <input type="password" id="login-password" placeholder="&nbsp;" name="login-password" required>
             <label class="login__label-name" for="login-password">
               <span class="login__content-name">
                 Password

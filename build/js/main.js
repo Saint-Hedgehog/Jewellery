@@ -9,9 +9,23 @@
   if (accordionBlocksMainPage) {
     accordionBlocksMainPage.forEach((item) => {
       item.classList.remove(`accordion__item--shown`);
-      item.addEventListener(`click`, (evt) => {
-        evt.currentTarget.classList.toggle(`accordion__item--shown`);
-      });
+    });
+
+    accordionBlocksMainPage.forEach((item) => {
+      const toggleAccordionHendler = () => {
+        item.classList.toggle(`accordion__item--shown`);
+      };
+
+      const enterPressHandler = (evt) => {
+        if (evt.key === `Enter`) {
+          evt.preventDefault();
+          toggleAccordionHendler();
+        }
+      };
+
+      item.classList.remove(`accordion__item--shown`);
+      item.addEventListener(`click`, toggleAccordionHendler);
+      item.addEventListener(`keydown`, enterPressHandler);
     });
   }
 
@@ -53,6 +67,8 @@
       evt.preventDefault();
 
       window.utils.showModal(overlay);
+
+      closeModalBtn.focus();
 
       closeModalBtn.addEventListener(`click`, hideModalHandler);
       overlay.addEventListener(`click`, overlayPressHandler);
@@ -279,7 +295,6 @@
 
 (() => {
   const formsOnLightBg = document.querySelectorAll(`.search-form--on-light-bg`);
-  const formsOnDarkBg = document.querySelectorAll(`.search-form--on-dark-bg`);
 
   const toggleBackground = () => {
     if (formsOnLightBg) {
@@ -293,21 +308,6 @@
 
         inputSearch.addEventListener(`blur`, () => {
           container.classList.remove(`search-form__bg--on-light`);
-        });
-      });
-    }
-
-    if (formsOnDarkBg) {
-      formsOnDarkBg.forEach((form) => {
-        const inputSearch = form.querySelector(`input[type="search"]`);
-        const container = inputSearch.closest(`.search-form__bg`);
-
-        inputSearch.addEventListener(`focus`, () => {
-          container.classList.add(`search-form__bg--on-dark`);
-        });
-
-        inputSearch.addEventListener(`blur`, () => {
-          container.classList.remove(`search-form__bg--on-dark`);
         });
       });
     }
@@ -329,7 +329,7 @@
       pagination: {
         el: `.slider__pagination`,
         renderBullet(index, bulletClass) {
-          return `<span class="` + bulletClass + `">` + (index + 1) + `</span>`;
+          return `<button class="` + bulletClass + `"type="button">` + (index + 1) + `</button>`;
         },
         bulletClass: `pagination__list-item`,
         bulletActiveClass: `pagination__current-page`,
@@ -342,8 +342,8 @@
           pagination: {
             type: `fraction`,
             renderFraction(currentClass, totalClass, index, total) {
-              return `<span class="` + currentClass + `">0 ` + index + ` </span>` +
-                ` of ` + `<span class="` + totalClass + `">0 ` + total + ` </span>`;
+              return `<span class="` + currentClass + `"type="button">0 ` + index + ` </span>` +
+                ` of ` + `<span class="` + totalClass + `"type="button">0 ` + total + ` </span>`;
             },
           },
         },
@@ -372,9 +372,6 @@
         onlyInViewport: true,
       },
       autoHeight: true,
-      a11y: {
-        enabled: true,
-      }
     });
   }
 })();

@@ -15,20 +15,22 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
-<body class="page">
+<body>
   <!-- =========== -->
   <!-- Шапка сайта -->
   <!-- =========== -->
   <header class="page-header page-header--product page-header--no-js page-header--nav-open">
     <div class="page-header__top-wrapper">
       <div class="page-header__top-container container">
-        <div class="page-header__search">
-          <form class="search-form search-form--on-light-bg" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="page-header__search search-form search-form--on-light-bg">
+          <form action="https://echo.htmlacademy.ru" method="POST">
             <div class="search-form__bg">
-              <svg width="14" height="14">
-                <use xlink:href="img/sprite/sprite.svg#search"></use>
-              </svg>
-              <label class="visually-hidden" for="header-search">Search the website</label>
+              <label for="header-search">
+                <svg width="14" height="14">
+                  <use xlink:href="img/sprite/sprite.svg#search"></use>
+                </svg>
+                <span class="visually-hidden">Search the website</span>
+              </label>
               <input type="search" id="header-search" name="search" placeholder="Type here to search">
             </div>
           </form>
@@ -41,30 +43,26 @@
           </svg>
         </button>
         <!--  -->
-        <div class="page-header__logo">
-          <a href="index.html" class="page-header__logo-link" aria-label="Go to main page">
-            <svg width="66" height="66">
-              <use xlink:href="img/sprite/sprite.svg#logo"></use>
-            </svg>
-          </a>
-        </div>
+        <a href="index.html" class="page-header__logo-link" aria-label="Go to main page">
+          <svg width="66" height="66">
+            <use xlink:href="img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </a>
         <!--  -->
-        <div class="page-header__user">
-          <ul class="page-header__user-list">
-            <li class="page-header__user-item">
-              <a class="page-header__user-link page-header__user-link--login js-login" href="login.html" aria-label="Login">Login</a>
-            </li>
-            <!--  -->
-            <li class="page-header__user-item">
-              <a class="page-header__user-link page-header__user-link--cart" href="#" aria-label="Cart">
-                <span>Cart 0</span>
-                <svg width="20" height="18">
-                  <use xlink:href="img/sprite/sprite.svg#cart"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul class="page-header__user-list">
+          <li class="page-header__user-item">
+            <a class="page-header__user-link page-header__user-link--login js-login" href="login.html#login-page" aria-label="Login">Login</a>
+          </li>
+          <!--  -->
+          <li class="page-header__user-item">
+            <a class="page-header__user-link page-header__user-link--cart" href="#" aria-label="Cart">
+              <span>Cart 0</span>
+              <svg width="20" height="18">
+                <use xlink:href="img/sprite/sprite.svg#cart"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
     <!--  -->
@@ -105,7 +103,7 @@
             <a class="main-nav__link main-nav__link--secondary" href="#" aria-label="Go to the Contact Us page">Contact Us</a>
           </li>
         </ul>
-        <a class="main-nav__link main-nav__link--login js-login" href="login.html" aria-label="Login">Login</a>
+        <a class="main-nav__link main-nav__link--login js-login" href="login.html#login-page" aria-label="Login">Login</a>
       </div>
     </nav>
   </header>
@@ -115,7 +113,7 @@
   <main>
     <h1 class="visually-hidden">CH - jewellery shop</h1>
     <div class="container">
-      <section class="added-to-cart">
+      <section class="added-to-cart" id="added-to-cart-page">
         <h2>The item was added to your cart</h2>
         <div class="added-to-cart__item">
           <div>
@@ -168,17 +166,19 @@
         <h2>The good stuff in&nbsp;your inbox</h2>
         <p>News and updates from CH. No&nbsp;spam,&nbsp;we promise.</p>
         <!--  -->
-        <form class="signup__form info-form" action="https://echo.htmlacademy.ru" method="POST">
-          <fieldset>
-            <input type="email" id="signup-email" placeholder="&nbsp;" name="signup-email" required="">
-            <label class="signup__label-name" for="signup-email">
-              <span class="signup__content-name">
-                Your E-mail
-              </span>
-            </label>
-            <button class="btn-in-input btn-in-input--arrow" type="submit" aria-label="Sign Up">Sign Up</button>
-          </fieldset>
-        </form>
+        <div class="signup__form info-form">
+          <form action="https://echo.htmlacademy.ru" method="POST">
+            <div>
+              <input type="email" id="signup-email" placeholder="&nbsp;" name="signup-email" required="">
+              <label class="signup__label-name" for="signup-email">
+                <span class="signup__content-name">
+                  Your E-mail
+                </span>
+              </label>
+              <button class="btn-in-input btn-in-input--arrow" type="submit" aria-label="Sign Up">Sign Up</button>
+            </div>
+          </form>
+        </div>
       </div>
       <!--  -->
       <div class="page-footer__nav footer-nav footer-nav">
@@ -273,8 +273,8 @@
   <!-- ============== -->
   <div class="overlay overlay--transparent" id="overlay-login">
     <div class="popup js-modal">
-      <section class="login">
-        <form class="login__form info-form" action="https://echo.htmlacademy.ru" method="POST">
+      <section class="login login__form info-form">
+        <form action="https://echo.htmlacademy.ru" method="POST">
           <h2>Log In</h2>
           <fieldset>
             <input type="email" id="login-email" placeholder="&nbsp;" name="login-email" required="">
@@ -286,7 +286,7 @@
           </fieldset>
           <!--  -->
           <fieldset>
-            <input type="Password" id="login-password" placeholder="&nbsp;" name="login-password" required="">
+            <input type="password" id="login-password" placeholder="&nbsp;" name="login-password" required="">
             <label class="login__label-name" for="login-password">
               <span class="login__content-name">
                 Password

@@ -5,13 +5,14 @@
   z-index: 10;
   align-items: center;
   justify-content: flex-start;
+  height: 40px;
   background-color: rgba($white, 0.15);
   border: 1px solid transparent;
   border-radius: 21px;
 }
 
 .search-form svg {
-  margin: -1px -5px 0 -1px;
+  margin: 3px -5px 0 -1px;
 
   @include tablet {
     margin-left: 11px;
@@ -77,10 +78,4 @@
     background-color: rgba($color-text-light, 0.05);
     border-radius: 21px;
   }
-}
-
-.search-form__bg--on-dark {
-  background-color: rgba($white, 0.05);
-  border: 1px solid $white;
-  border-radius: 21px;
 }

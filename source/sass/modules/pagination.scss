@@ -21,9 +21,13 @@
 
   list-style: none;
   display: inline-block;
+  margin: 0;
   margin-right: 12px;
+  padding: 0;
   vertical-align: middle;
+  background-color: transparent;
   color: $color_text-light;
+  border: 0;
 
   @include mobile {
     margin-right: 23px;

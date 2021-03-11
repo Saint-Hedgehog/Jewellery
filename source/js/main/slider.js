@@ -11,7 +11,7 @@
       pagination: {
         el: `.slider__pagination`,
         renderBullet(index, bulletClass) {
-          return `<span class="` + bulletClass + `">` + (index + 1) + `</span>`;
+          return `<button class="` + bulletClass + `"type="button">` + (index + 1) + `</button>`;
         },
         bulletClass: `pagination__list-item`,
         bulletActiveClass: `pagination__current-page`,
@@ -24,8 +24,8 @@
           pagination: {
             type: `fraction`,
             renderFraction(currentClass, totalClass, index, total) {
-              return `<span class="` + currentClass + `">0 ` + index + ` </span>` +
-                ` of ` + `<span class="` + totalClass + `">0 ` + total + ` </span>`;
+              return `<span class="` + currentClass + `"type="button">0 ` + index + ` </span>` +
+                ` of ` + `<span class="` + totalClass + `"type="button">0 ` + total + ` </span>`;
             },
           },
         },
@@ -54,9 +54,6 @@
         onlyInViewport: true,
       },
       autoHeight: true,
-      a11y: {
-        enabled: true,
-      }
     });
   }
 })();

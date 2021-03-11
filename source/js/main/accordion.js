@@ -9,9 +9,23 @@
   if (accordionBlocksMainPage) {
     accordionBlocksMainPage.forEach((item) => {
       item.classList.remove(`accordion__item--shown`);
-      item.addEventListener(`click`, (evt) => {
-        evt.currentTarget.classList.toggle(`accordion__item--shown`);
-      });
+    });
+
+    accordionBlocksMainPage.forEach((item) => {
+      const toggleAccordionHendler = () => {
+        item.classList.toggle(`accordion__item--shown`);
+      };
+
+      const enterPressHandler = (evt) => {
+        if (evt.key === `Enter`) {
+          evt.preventDefault();
+          toggleAccordionHendler();
+        }
+      };
+
+      item.classList.remove(`accordion__item--shown`);
+      item.addEventListener(`click`, toggleAccordionHendler);
+      item.addEventListener(`keydown`, enterPressHandler);
     });
   }
 

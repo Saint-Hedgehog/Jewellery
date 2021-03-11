@@ -1,13 +1,11 @@
 .container {
   position: relative;
   width: auto;
-  min-width: $desk_min;
   max-width: $desk_max;
   margin: 0 auto;
   padding: 0 $desk_pads;
 
   @include tablet {
-    min-width: $tab_min;
     width: auto;
     padding: 0 $tab_pads;
   }

@@ -2,6 +2,7 @@
   @include title;
 }
 
+.info-form div,
 .info-form fieldset {
   @include flex(row);
   @include fieldset-reset;

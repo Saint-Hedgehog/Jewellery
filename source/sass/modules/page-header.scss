@@ -84,7 +84,7 @@
   }
 }
 
-.page-header__logo {
+.page-header__logo-link {
   position: absolute;
   top: 30px;
   left: 50%;
@@ -116,20 +116,17 @@
   @include hover-opacity;
 }
 
-.page-header__user {
+.page-header__user-list {
+  @include flex(row);
+  @include reset-list;
+
+  justify-content: flex-end;
   max-width: 40%;
   margin-top: -1px;
 
   @include tablet {
     max-width: none;
   }
-}
-
-.page-header__user-list {
-  @include flex(row);
-  @include reset-list;
-
-  justify-content: flex-end;
 }
 
 .page-header__user-item {
@@ -212,7 +209,7 @@
   }
 }
 
-.page-header--no-js .page-header__user {
+.page-header--no-js .page-header__user-list {
   @include tablet {
     margin-left: auto;
   }

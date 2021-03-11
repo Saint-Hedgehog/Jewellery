@@ -12,6 +12,8 @@
 
       window.utils.showModal(overlay);
 
+      closeModalBtn.focus();
+
       closeModalBtn.addEventListener(`click`, hideModalHandler);
       overlay.addEventListener(`click`, overlayPressHandler);
       document.addEventListener(`keydown`, escPressHandler);

@@ -85,7 +85,7 @@
   margin-top: 4px;
   margin-bottom: 46px;
   padding-right: 1px;
-  vertical-align: center;
+  vertical-align: middle;;
   color: $color_text-light;
 
   &:hover,
@@ -109,7 +109,7 @@
   margin-top: 14px;
   padding-right: 5px;
   text-align: center;
-  vertical-align: center;
+  vertical-align: middle;;
   color: $color_text-light;
 
   @include tablet {
