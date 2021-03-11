@@ -284,7 +284,8 @@
 }
 
 // product.html
-.page-header--product {
+.page-header--product,
+.page-header--login {
   @include desktop-only {
     position: relative;
 

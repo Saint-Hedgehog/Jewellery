@@ -1,20 +1,19 @@
 .popup {
   position: absolute;
-  top: 372px;
+  top: 332px;
   left: 50%;
   z-index: 100;
   width: max-content;
   height: max-content;
-  box-shadow: 0 4px 32px $color-popap-card-shadow;
   overflow: auto;
   transform: translateX(-50%);
 
   @include tablet {
-    top: 258px;
+    top: 218px;
   }
 
   @include mobile {
-    top: 117px;
+    top: 77px;
   }
 }
 

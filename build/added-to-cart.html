@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CH - jewellery shop">
-  <meta name="keywords" content="CH, jewellery, ring, necklace, earrings, choker, gold chain">
-  <title>CH - jewellery shop</title>
-  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-  <link rel="preload" href="fonts/cormorant-garamond-bold.woff2" crossorigin="anonymous" as="font">
-  <link rel="preload" href="fonts/poppins.woff2" crossorigin="anonymous" as="font">
-  <link rel="preload" href="fonts/poppins-medium.woff2" crossorigin="anonymous" as="font">
-  <link rel="preload" href="fonts/poppins-bold.woff2" crossorigin="anonymous" as="font">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CH - jewellery shop">
+    <meta name="keywords" content="CH, jewellery, ring, necklace, earrings, choker, gold chain">
+    <title>CH - jewellery shop</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="preload" href="fonts/cormorant-garamond-bold.woff2" crossorigin="anonymous" as="font">
+    <link rel="preload" href="fonts/poppins.woff2" crossorigin="anonymous" as="font">
+    <link rel="preload" href="fonts/poppins-medium.woff2" crossorigin="anonymous" as="font">
+    <link rel="preload" href="fonts/poppins-bold.woff2" crossorigin="anonymous" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
 
 <body>
   <!-- =========== -->
   <!-- Шапка сайта -->
   <!-- =========== -->
-  <header class="page-header page-header--login page-header--no-js page-header--nav-open">
+  <header class="page-header page-header--product page-header--no-js page-header--nav-open">
     <div class="page-header__top-wrapper">
       <div class="page-header__top-container container">
         <div class="page-header__search search-form search-form--on-light-bg">
@@ -51,7 +51,7 @@
         <!--  -->
         <ul class="page-header__user-list">
           <li class="page-header__user-item">
-            <a class="page-header__user-link page-header__user-link--login page-header__user-link--login-page js-login" href="login.html#login-page" aria-label="Login">Login</a>
+            <a class="page-header__user-link page-header__user-link--login js-login" href="login.html#login-page" aria-label="Login">Login</a>
           </li>
           <!--  -->
           <li class="page-header__user-item">
@@ -103,7 +103,7 @@
             <a class="main-nav__link main-nav__link--secondary" href="#" aria-label="Go to the Contact Us page">Contact Us</a>
           </li>
         </ul>
-        <a class="main-nav__link main-nav__link--login main-nav__link--login-page js-login" href="login.html" aria-label="Login">Login</a>
+        <a class="main-nav__link main-nav__link--login js-login" href="login.html#login-page" aria-label="Login">Login</a>
       </div>
     </nav>
   </header>
@@ -113,31 +113,47 @@
   <main>
     <h1 class="visually-hidden">CH - jewellery shop</h1>
     <div class="container">
-      <section class="login login--page login__form info-form" id="login-page">
-        <form action="https://echo.htmlacademy.ru" method="POST">
-          <h2>Log In</h2>
-          <fieldset>
-            <input type="email" id="login-email" placeholder="&nbsp;" name="login-email" required>
-            <label class="login__label-name" for="login-email">
-              <span class="login__content-name">
-                Your E-mail
-              </span>
-            </label>
-          </fieldset>
+      <section class="added-to-cart" id="added-to-cart-page">
+        <h2>The item was added to your cart</h2>
+        <div class="added-to-cart__item">
+          <div>
+            <picture>
+              <!-- 1х: 88px; 2x: 176px -->
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/added-to-cart-tablet-gold-necklace@1x.webp 1x, img/added-to-cart-tablet-gold-necklace@2x.webp 2x">
+              <!-- 1х: 84px; 2x: 168px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/added-to-cart-desktop-gold-necklace@1x.webp 1x, img/added-to-cart-desktop-gold-necklace@2x.webp 2x">
+              <!-- 1х: 84px; 2x: 168px -->
+              <img src="img/added-to-cart-desktop-gold-necklace@1x.jpg" alt="Gold Necklace" width="84" height="79" srcset="img/added-to-cart-desktop-gold-necklace@2x.jpg 2x" loading="lazy">
+            </picture>
+            <!--  -->
+            <div class="added-to-cart__description">
+              <h3>Gold Necklace</h3>
+              <p>$<span>115</span></p>
+            </div>
+          </div>
           <!--  -->
-          <fieldset>
-            <input type="password" id="login-password" placeholder="&nbsp;" name="login-password" required>
-            <label class="login__label-name" for="login-password">
-              <span class="login__content-name">
-                Password
-              </span>
-            </label>
-          </fieldset>
-          <!--  -->
-          <a class="login__forgot-password" href="#" aria-label="Go to password recovery page">Forgot your password?</a>
-          <button class="btn js-submit" type="submit" aria-label="Log In">Log In</button>
-          <a class="login__sign-up" href="#" aria-label="Go to Sign up page">Don’t have an account? <span>Sign up</span></a>
-        </form>
+          <div class="added-to-cart__quantity-wrapper">
+            <button class="added-to-cart__quantity-btn added-to-cart__quantity-btn--plus" type="button">
+              <span class="visually-hidden">+</span>
+            </button>
+            <!--  -->
+            <p>1</p>
+            <!--  -->
+            <button class="added-to-cart__quantity-btn added-to-cart__quantity-btn--minus" type="button">
+              <span class="visually-hidden">-</span>
+            </button>
+          </div>
+        </div>
+        <!--  -->
+        <div class="added-to-cart__total-wrapper">
+          <p>You have 1 item in the cart</p>
+          <p>Cart subtotal: $<span>115</span></p>
+        </div>
+        <!--  -->
+        <div class="added-to-cart__btns-wrapper">
+          <a class="added-to-cart__btn btn btn--ghost" href="catalog.html" aria-label="Go to the product page">Continue shopping</a>
+          <a class="added-to-cart__btn btn" href="#" aria-label="Checkout">Checkout</a>
+        </div>
       </section>
     </div>
   </main>
@@ -153,7 +169,7 @@
         <div class="signup__form info-form">
           <form action="https://echo.htmlacademy.ru" method="POST">
             <div>
-              <input type="email" id="signup-email" placeholder="&nbsp;" name="signup-email" required>
+              <input type="email" id="signup-email" placeholder="&nbsp;" name="signup-email" required="">
               <label class="signup__label-name" for="signup-email">
                 <span class="signup__content-name">
                   Your E-mail
@@ -206,7 +222,7 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li>
-            <a class="social__link" href="https://facebook.com"  aria-label="We are on facebook" target="_blank" rel="noopener">
+            <a class="social__link" href="https://facebook.com" aria-label="We are on facebook" target="_blank" rel="noopener">
               <div class="social__icon-wrapper">
                 <svg width="10" height="15">
                   <use xlink:href="img/sprite/sprite.svg#fb"></use>
@@ -252,6 +268,43 @@
       </div>
     </div>
   </footer>
+  <!-- ============== -->
+  <!-- Модальное окно -->
+  <!-- ============== -->
+  <div class="overlay overlay--transparent" id="overlay-login">
+    <div class="popup js-modal">
+      <section class="login login__form info-form">
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <h2>Log In</h2>
+          <fieldset>
+            <input type="email" id="login-email" placeholder="&nbsp;" name="login-email" required="">
+            <label class="login__label-name" for="login-email">
+              <span class="login__content-name">
+                Your E-mail
+              </span>
+            </label>
+          </fieldset>
+          <!--  -->
+          <fieldset>
+            <input type="password" id="login-password" placeholder="&nbsp;" name="login-password" required="">
+            <label class="login__label-name" for="login-password">
+              <span class="login__content-name">
+                Password
+              </span>
+            </label>
+          </fieldset>
+          <!--  -->
+          <a class="login__forgot-password" href="#" aria-label="Go to password recovery page">Forgot your password?</a>
+          <button class="btn js-submit" type="submit" aria-label="Log In">Log In</button>
+          <a class="login__sign-up" href="#" aria-label="Go to Sign up page">Don’t have an account? <span>Sign up</span></a>
+        </form>
+      </section>
+      <!--  -->
+      <button class="popup__close-btn btn-close js-close" type="button">
+        <span class="visually-hidden">Close popup</span>
+      </button>
+    </div>
+  </div>
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
