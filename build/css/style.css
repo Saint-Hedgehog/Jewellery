@@ -4017,7 +4017,7 @@ main {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   max-width: 15%;
   margin: -5px -3px 0 auto; }
   @media (max-width: 1023px) {
@@ -4082,6 +4082,7 @@ main {
   margin-top: 15px;
   margin-bottom: 8px;
   padding-left: 4px;
+  padding-right: 4px;
   align-self: center; }
   @media (max-width: 767px) {
     .added-to-cart__quantity-wrapper p {

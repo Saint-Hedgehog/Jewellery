@@ -222,7 +222,7 @@
 .added-to-cart__quantity-wrapper {
   @include flex(column);
 
-  align-items: flex-end;
+  align-items: center;
   max-width: 15%;
   margin: -5px -3px 0 auto;
 
