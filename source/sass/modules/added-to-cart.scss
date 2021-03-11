@@ -304,11 +304,9 @@
 
   display: block;
   width: 14px;
-  margin: 15px -5px 8px 3px;
-  // margin-top: 15px;
-  // margin-bottom: 8px;
-
-  align-self: center;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  text-align: center;
 
   @include mobile {
     @include typography (16, 21);
