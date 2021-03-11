@@ -1,26 +1,24 @@
 .added-to-cart {
   position: relative;
   width: 500px;
-  margin: 0 auto 100px;
+  margin: 0 auto;
   padding: 30px 35px 55px;
   background-color: $white;
-  box-shadow: 0 4px 32px $color-popap-card-shadow;
 
   @include tablet {
     width: 502px;
-    margin: 0 auto 80px;
     padding: 30px 30px 55px;
   }
 
   @include mobile {
     width: 290px;
-    margin: 0 auto 50px;
     padding: 22px 15px 45px;
   }
 }
 
 .added-to-cart--page {
   margin-top: 100px;
+  box-shadow: 0 4px 32px $color-popap-card-shadow;
 
   @include tablet {
     margin-top: 80px;
