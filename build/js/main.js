@@ -387,9 +387,16 @@
           slide.childNodes[1].setAttribute(`tabindex`, `0`);
         }
       });
+      slider.pagination.bullets.forEach((bullet) => {
+        if (bullet.classList.contains(`pagination__current-page`)) {
+          bullet.setAttribute(`tabIndex`, `-1`);
+        } else {
+          bullet.setAttribute(`tabIndex`, `0`);
+        }
+      });
     };
 
-    inertNotVisible();
+    setTimeout(inertNotVisible, 0);
   }
 })();
 
