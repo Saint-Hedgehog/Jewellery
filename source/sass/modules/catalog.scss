@@ -274,7 +274,6 @@
 
 .catalog__btn {
   @include typography (16, 21);
-  @include hover-effect($color_main);
 
   margin: 0;
   padding: 0;
@@ -282,6 +281,14 @@
   border: none;
   letter-spacing: 0.02em;
   cursor: pointer;
+
+  &--previous {
+    pointer-events: none;
+  }
+
+  &--next {
+    @include hover-effect($color_main);
+  }
 }
 
 .catalog__pagination {
